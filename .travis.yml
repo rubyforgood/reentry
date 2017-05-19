@@ -1,12 +1,13 @@
 language: ruby
 rvm:
-- 2.3.1
+- 2.4.1
+dist: trusty
 branches:
   only:
   - master
 sudo: false
 addons:
-  postgresql: '9.4'
+  postgresql: '9.6'
   apt:
     packages:
     - libxslt1-dev
@@ -14,3 +15,5 @@ addons:
 cache:
   - apt
   - bundler
+before_script:
+  - bundle exec rake travis:before_script
