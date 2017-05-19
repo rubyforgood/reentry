@@ -1,0 +1,16 @@
+language: ruby
+rvm:
+- 2.3.1
+branches:
+  only:
+  - master
+sudo: false
+addons:
+  postgresql: '9.4'
+  apt:
+    packages:
+    - libxslt1-dev
+    - libxml2-dev
+cache:
+  - apt
+  - bundler
