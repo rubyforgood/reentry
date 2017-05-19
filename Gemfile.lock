@@ -53,6 +53,7 @@ GEM
       xpath (~> 2.0)
     childprocess (0.7.0)
       ffi (~> 1.0, >= 1.0.11)
+    coderay (1.1.1)
     coffee-rails (4.2.1)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.2.x)
@@ -67,6 +68,7 @@ GEM
     globalid (0.4.0)
       activesupport (>= 4.2.0)
     i18n (0.8.1)
+    immutable-struct (2.2.3)
     jbuilder (2.6.4)
       activesupport (>= 3.0.0)
       multi_json (>= 1.2)
@@ -78,17 +80,30 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.6.5)
       mime-types (>= 1.16, < 4)
+    metaclass (0.0.4)
     method_source (0.8.2)
     mime-types (3.1)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2016.0521)
     mini_portile2 (2.1.0)
     minitest (5.10.2)
+    minitest-rails (3.0.0)
+      minitest (~> 5.8)
+      railties (~> 5.0)
+    minitest-spec-rails (5.4.0)
+      minitest (~> 5.0)
+      rails (>= 4.1)
+    mocha (1.1.0)
+      metaclass (~> 0.0.1)
     multi_json (1.12.1)
     nio4r (2.0.0)
     nokogiri (1.7.2)
       mini_portile2 (~> 2.1.0)
-    pg (0.20.0)
+    pg (0.18.4)
+    pry (0.10.4)
+      coderay (~> 1.1.0)
+      method_source (~> 0.8.1)
+      slop (~> 3.4)
     public_suffix (2.0.5)
     puma (3.8.2)
     rack (2.0.3)
@@ -134,6 +149,7 @@ GEM
       childprocess (~> 0.5)
       rubyzip (~> 1.0)
       websocket (~> 1.0)
+    slop (3.6.0)
     spring (2.0.1)
       activesupport (>= 4.2)
     spring-watcher-listen (2.0.1)
@@ -175,14 +191,19 @@ DEPENDENCIES
   byebug
   capybara (~> 2.13)
   coffee-rails (~> 4.2)
+  immutable-struct
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
+  minitest
+  minitest-rails
+  minitest-spec-rails
+  mocha
   pg
+  pry
   puma (~> 3.7)
   rails (~> 5.1.1)
   sass-rails (~> 5.0)
   selenium-webdriver
-  spring
   spring-watcher-listen (~> 2.0.0)
   turbolinks (~> 5)
   tzinfo-data
