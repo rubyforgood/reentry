@@ -44,4 +44,12 @@ class ShelterListingsSpider
 
 		puts "#{name}|#{address}|#{phone}|#{service}|#{website}"
 	end
+
+	private
+
+		def extract_data(url: raise, css_selectors: )
+			doc = Nokogiri::HTML(open(url))
+			doc.css(css_selectors)
+		end
+
 end
