@@ -1,4 +1,4 @@
-class Domains < ActiveRecord::Migration[5.1]
+class DomainsAndLinks < ActiveRecord::Migration[5.1]
   def change
     create_table :domains do |t|
       t.string :name
