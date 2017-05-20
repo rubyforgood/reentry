@@ -1,0 +1,772 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://www.shelterlistings.org/details/38685/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 20 May 2017 17:52:13 GMT
+      Server:
+      - Apache
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - PHPSESSID=n562gv0bqa29os6cq2f45f12d6; path=/
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - text/html; charset=UTF-8
+    body:
+      encoding: UTF-8
+      string: "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\"\r\n\"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\r\n\r\n<html
+        xmlns=\"http://www.w3.org/1999/xhtml\" dir=\"ltr\" lang=\"en-US\">\r\n\r\n<head
+        profile=\"http://gmpg.org/xfn/11\">\r\n\r\n\t<!-- Meta & Title --> \r\n\t<meta
+        http-equiv=\"content-type\" content=\"text/html; charset=UTF-8\" />\r\n\t<title>Changing
+        Lives Veterans Services. </title>\r\n\t<meta name=\"description\" content=\"Changing
+        Lives\" >\r\n\t<meta name=\"keywords\" content=\"Changing Lives\">\r\n\t<!--
+        CSS -->\r\n\t<link type=\"text/css\" rel=\"stylesheet\" href=\"http://www.shelterlistings.org/styles/style.css\"
+        media=\"screen\" />\r\n    <link type=\"text/css\" rel=\"stylesheet\" href=\"http://www.shelterlistings.org/styles/stylephones.css\"
+        media=\"screen\" />\r\n\r\n\r\n\r\n\t<!-- Javascript -->\r\n\t<script type=\"text/javascript\"
+        src=\"http://www.shelterlistings.org/js/jquery.min144.js\"></script>\r\n\t<script
+        type=\"text/javascript\" src=\"http://www.shelterlistings.org/js/jquery.tools.min.js\"></script>\r\n\t<script
+        type=\"text/javascript\" src=\"http://www.shelterlistings.org/js/superfish.js\"></script>\r\n\t<script
+        type=\"text/javascript\" src=\"http://www.shelterlistings.org/js/jquery.tipTip.min.js\"></script>\r\n\t<script
+        type=\"text/javascript\" src=\"http://www.shelterlistings.org/js/custom.js\"></script>\r\n
+        \  <script type=\"text/javascript\" src=\"https://www.google.com/jsapi\"></script>\r\n
+        \   <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js\"></script>\r\n
+        \   <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"
+        />\r\n\t\r\n\t\r\n\r\n<script type=\"text/javascript\" src=\"http://maps.google.com/maps/api/js?sensor=false\"></script>\r\n<script
+        type=\"text/javascript\" src=\"http://ecn.dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=6.2\"></script>\r\n<script
+        type=\"text/javascript\">\r\n    var myPano;\r\n    function initialize()
+        {\r\n    \t    \tvar latlng = new google.maps.LatLng(39.3236830,-76.5690640);\r\n
+        \   \tvar mapOptions = {\r\n\t  \t      center: latlng,\r\n\t  \t      zoom:
+        16,\r\n\t  \t      mapTypeId: google.maps.MapTypeId.ROADMAP,\r\n\t  \t      streetViewControl:
+        true\r\n\t  \t    }; \r\n\t    var map = new google.maps.Map(document.getElementById(\"map_canvas\"),
+        mapOptions);\r\n\t    var marker = new google.maps.Marker({\r\n\t        position:
+        latlng, \r\n\t        map: map,\r\n\t        title:\"!\"\r\n\t    });\r\n\t
+        \   var panoramaOptions = {\r\n\t      position: latlng,\r\n\t      pov: {\r\n\t
+        \       heading: 34,\r\n\t        pitch: 10,\r\n\t        zoom: 1\r\n\t      }\r\n\t
+        \   };\r\n\t    var nearestLatLng = null;\r\n\t\tvar nearestPano = null;\r\n\t\tvar
+        client = new google.maps.StreetViewService();\r\n\t\tclient.getPanoramaByLocation(latlng,
+        50, function(result,\tstatus) {\r\n\t\t  if (status == google.maps.StreetViewStatus.OK)
+        {\r\n\t\t\t  var panorama = new  google.maps.StreetViewPanorama(document.getElementById(\"pano\"),panoramaOptions);\r\n\t\t\t
+        \ map.setStreetView(panorama);\r\n\t\t    //nearestPano = result.location.pano;\r\n\t\t
+        \   //nearestLatLng = result.location.latLng;\r\n\t\t  } else {\r\n\t\t\t
+        \ document.getElementById(\"pano\").style.display = \"none\";\r\n\t\t  }\r\n\t\t});\r\n\r\n\t
+        \   var vemap = new VEMap(\"mymapcontroldiv\");\r\n\t    vemap.LoadMap(new
+        VELatLong(39.3236830,-76.5690640), //Center point\r\n\t    \t\t\t16, //Zoom
+        level\r\n\t                VEMapStyle.Birdseye, //Map style\r\n\t                false);
+        //Static map? No!\r\n\r\n\t    window.setTimeout(switchMapStyle, 1000);\r\n\t
+        \   \r\n\t    function switchMapStyle(){\r\n\t        if(vemap.IsBirdseyeAvailable()==false){\r\n\t
+        \           vemap.SetMapStyle(VEMapStyle.Hybrid); \r\n\t        }\r\n\t    }\r\n\t\t
+        \   }\r\n</script>\r\n\r\n\r\n\r\n<script type=\"text/javascript\">\r\n$(document).ready(function(){\r\n
+        \ $(\"#seeaddress\").click(function(){\r\n\t\t$.ajax({\r\n\t\t  type: \"GET\",\r\n\t\t
+        \ url: \"http://www.shelterlistings.org/address/get_address.php\",\r\n\t\t
+        \ data: \"address=c3RhdGU9bWQmaWQ9Mzg2ODU=\"\r\n\t\t}).done(function( msg
+        ) {\r\n\t\t  $(\"#address\").html( msg );\r\n\t\t});\r\n\t});\r\n});\r\n</script>\r\n\r\n\r\n
+        \ <meta name=\"viewport\" content=\"width=device-width=550, initial-scale=.7,
+        maximum-scale=1\" />\r\n</head>\r\n\r\n\r\n<body  onload=\"initialize()\"
+        onunload=\"GUnload()\">\r\n\r\n\t<div id=\"nav-top\">\r\n\t\t\r\n\t</div><!--#nav-top-->\r\n\t\t\r\n\r\n\t<div
+        id=\"header\">\r\n\t\t<div class=\"wrapper\">\r\n\t\r\n\t\t\t<!-- Image Based
+        Logo -->\r\n\t\t\t<br /><a href=\"http://www.shelterlistings.org\"><img src=\"http://www.shelterlistings.org/images/newlooklogo5.png\"
+        alt=\"Shelter Listings\" /></a>\r\n\t\t\t\r\n\t\t\t\r\n\t\t\r\n\t\t</div><!--#wrapper-->\r\n\t</div><!--#header-->\r\n\r\n\t\r\n\t<!--
+        Main Navigation Menu -->\r\n\t\t<div id=\"main-menu\">\r\n\t\t\t<div class=\"wrapper\">\r\n\t\t\t\r\n\t\t\t<ul>\r\n\t\t\t\t<li><a
+        href=\"http://www.shelterlistings.org\">Home</a></li>\r\n\t\t\t\t<li><a href=\"http://www.shelterlistings.org/about.html\">About
+        Us</a>\r\n\t\t\t\t<li><a href=\"http://www.shelterlistings.org/partner.html\">Partner
+        With Us</a></li>\r\n\t\t\t\t<li><a href=\"http://www.shelterlistings.org/new_location.php\">Add
+        A New Listing</a></li>\r\n\t\t\t\t<li><a href=\"http://www.shelterlistings.org/contact_us.php\">Contact
+        Us</a></li>\r\n\t\t\t\t<li><a href=\"http://www.shelterlistings.org/feedback.php\">Feedback</a></li>\r\n\t\t\t\t<li><a
+        href=\"http://www.shelterlistings.org/homeless_veterans.html\">Homeless Veterans</a></li>\r\n\r\n\t\t\t\r\n\t\t\t</ul>\r\n\t\t\t\r\n\t\t</div><!--#wrapper-->\r\n\t</div><!--#main-menu-->\r\n\t\r\n\r\n\t<div
+        class=\"wrapper\">\r\n\t\r\n\t\t<div id=\"content\" class=\"grid8 first\">\r\n\t\t\r\n\t\t\t<!--
+        Page Content -->\r\n\t\t\t<div class=\"post page-content\">\r\n\t\t\t<a href=\"http://www.shelterlistings.org/\"
+        title=\"Shelters\">Home</a> &raquo; <a href=\"http://www.shelterlistings.org/state/maryland.html\">Maryland</a>
+        &raquo; <a href=\"http://www.shelterlistings.org/city/baltimore-md.html\">Baltimore</a>\r\n\t\t\t\t<br
+        /><br /><br />\r\n\t\t\t\t<h2>Changing Lives</h2>\r\n\t\t\t\t<button id=\"seeaddress\">Click
+        to view address</button><br />\r\n                <div id=\"address\"></div><br
+        />\r\n\t\t\t\tBaltimore, MD 21213<br />\r\n\t\t\t\t410-940-7498<br />\r\n\t\t\t\t<a
+        href=\"http://www.shelterlistings.org/contact_us.php?shelter=38685\"><b>UPDATE
+        THIS LISTING</b></a>\r\n<br /><br />\r\n\r\n<script async src=\"//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js\"></script>\r\n<!--
+        shelterlistingsreponsive -->\r\n<ins class=\"adsbygoogle\"\r\n     style=\"display:block\"\r\n
+        \    data-ad-client=\"ca-pub-3544286905190479\"\r\n     data-ad-slot=\"6842757573\"\r\n
+        \    data-ad-format=\"auto\"></ins>\r\n<script>\r\n(adsbygoogle = window.adsbygoogle
+        || []).push({});\r\n</script>\r\n\r\n\r\n\t\t\r\n\t\r\n\r\n\r\n\r\n\r\n\r\n\t\t\t\t<div
+        class=\"entry-content\">\r\n\t\t\t\t\t<p>\t\r\n\t\r\n\t\r\n\t\r\n\r\n\t\t<div
+        id=\"grey_bar\"><strong>Class of Housing:</strong> Veterans Services.</div><br
+        />\r\n\t\t\t\r\n\t\t\r\n\t\t\r\n\t<div id=\"grey_bar\"><strong>General Information:</strong></div>
+        <br />\r\n\t<div style=\"display: block;\">\t<p>Organizational Overview&amp;lt;br
+        /&amp;gt;<br />&amp;lt;br /&amp;gt;<br />Changing Lives is a veteran supportive
+        services organization established in 2008 that was created with the hope of
+        alleviating homelessness after military service. &amp;lt;br /&amp;gt;<br />&amp;lt;br
+        /&amp;gt;<br />A wide array of services is offered to veterans and their families
+        in a structured environment, highlighted but the cross-enrollment of homeless
+        veterans in the agency&acirc;&euro;&trade;s SSVF and VA-VASH programs. &amp;lt;br
+        /&amp;gt;<br />&amp;lt;br /&amp;gt;<br />Our goal is to provide services and
+        support for veterans with special needs to live with dignity in the community,
+        direct their own lives and attain personal fulfillment.&amp;lt;br /&amp;gt;<br
+        />&nbsp;&amp;lt;br /&amp;gt;<br />Changing Lives is a structured supportive
+        program that provides affordable housing, spiritual/religious advising, drug
+        and alcohol counseling and treatment (extensive, supportive, structured IOP
+        Program), mental health and job readiness services to veterans.&amp;lt;br
+        /&amp;gt;<br />&amp;lt;br /&amp;gt;<br />Our mission is to provide quality
+        assistance to men and women veterans who are in need of help after periods
+        of military service. &amp;lt;br /&amp;gt;<br />&amp;lt;br /&amp;gt;<br />We
+        aim to ensure that each veteran is connected to programs and services which
+        enable us to provide them with safe, stable, and sanitary housing within their
+        financial means and to empower clients physically, emotionally, socially and
+        spiritually.&amp;lt;br /&amp;gt;<br />&amp;lt;br /&amp;gt;<br />Changing Lives
+        is aware of the unique needs that our female veterans face. We are more than
+        prepared to handle these issues.&amp;lt;br /&amp;gt;<br />&amp;lt;br /&amp;gt;<br
+        />Mental Health/PTSD help&amp;lt;br /&amp;gt;<br />Housing&amp;lt;br /&amp;gt;<br
+        />Health and wellness &amp;lt;br /&amp;gt;<br />Acupuncture&amp;lt;br /&amp;gt;<br
+        />Yoga&amp;lt;br /&amp;gt;<br />Physical fitness&amp;lt;br /&amp;gt;<br />Conflict
+        resolution &amp;lt;br /&amp;gt;<br />Couples Advancing Together&amp;lt;br
+        /&amp;gt;<br />Spirituality/Religion &amp;lt;br /&amp;gt;<br />Mentoring and
+        tutoring for dependent family members&amp;lt;br /&amp;gt;<br />Healthy eating
+        programs &amp;lt;br /&amp;gt;<br />Substance abuse, Drug and alcohol counseling,
+        treatment and recovery (structured IOP Program)&amp;lt;br /&amp;gt;<br />Educational
+        and personal development&amp;lt;br /&amp;gt;<br />Job training and preparedness&amp;lt;br
+        /&amp;gt;<br />Professional attire help&amp;lt;br /&amp;gt;<br />Well Baby
+        Workshops&amp;lt;br /&amp;gt;<br />Financial planning&amp;lt;br /&amp;gt;<br
+        />&amp;lt;br /&amp;gt;</p></div>\r\n\r\n\t\r\n    \t<br /><div id=\"grey_bar\"><strong>Date
+        Of Last Record Update: 11-19-2016</strong></div><br />\r\n\t    \r\n    \t\r\nDid
+        you find a problem with this listing? Please notify us of changes needed.<br
+        />\r\n<a href=\"http://www.shelterlistings.org/contact_us.php?shelter=38685\"><b>UPDATE
+        LISTING</b></a></p>\r\n\r\n\r\n<div id=\"grey_bar\"><b>How To Volunteer at
+        Changing Lives</b>:</div>\r\n<br />\r\nBe a volunteer. Call Changing Lives
+        at 410-940-7498 for current volunteer work opportunities.\r\n<br /><br />\r\n\r\n<div
+        id=\"grey_bar\"><strong>As A General Note About ShelterListings.org Listings:</strong></div>
+        \r\n<br />\r\nShelterListings.org does our best to provide listings that are
+        free of cost. Many of the homeless shelters and services are free of charge.
+        Some do charge small fees. We always urge the users of our website to visit
+        the websites of the providers listed, OR give them a phone call to find out
+        complete details. <br /><br />\r\nIn furtherance; Halfway Houses, Transitional
+        Housing, and Substance Abuse Treatment Centers for the most part charge a
+        fee. Most of the substance abuse resources we provide are low cost, Medicaid
+        or sliding scale fee. We provide as much information as possible on the website
+        of these locations. <br /><br />\r\nRooming and Boarding Houses do charge
+        fees. We list them where we find them. They are a nice low cost option for
+        housing. <br /><br />\r\n\r\n\r\n<script type=\"text/javascript\"><!--\r\ngoogle_ad_client
+        = \"pub-3544286905190479\";\r\n/* 336x280, created 8/17/11 */\r\ngoogle_ad_slot
+        = \"0227292876\";\r\ngoogle_ad_width = 336;\r\ngoogle_ad_height = 280;\r\n//-->\r\n</script>\r\n<script
+        type=\"text/javascript\"\r\nsrc=\"http://pagead2.googlesyndication.com/pagead/show_ads.js\">\r\n</script>\r\n\r\n\r\n\r\n\r\n\r\n\r\n<br
+        /><br />\r\n\r\n         <div id=\"grey_bar\"><strong>Help Us Help You</strong>
+        </div><br />\r\n                <form id=\"familyform\" action=\"http://www.shelterlistings.org/help_you.php\"
+        method=\"get\" target=\"_blank\">\r\n                    <p>Tell us what type
+        of assistance you are looking for.</p>\r\n                    <input type=\"hidden\"
+        name=\"sid\" value=\"slquestlisting\" />\r\n                    <input type=\"hidden\"
+        name=\"trx\" value=\"\" />\r\n                    <input type=\"checkbox\"
+        id=\"wic\" /> Help For Children and Single Mothers<br />\r\n                    <input
+        type=\"checkbox\" id=\"lih\" /> Low Income Housing<br />\r\n                    <input
+        type=\"checkbox\" id=\"emp\" /> Unemployment Benefits<br />\r\n                    <input
+        type=\"checkbox\" id=\"foo\" /> Food Stamps Assistance<br />\r\n                    <input
+        type=\"checkbox\" id=\"med\" /> Medical Assistance<br />\r\n                    <input
+        type=\"checkbox\" id=\"den\" /> Dental Assistance<br />\r\n                    <input
+        type=\"email\" name=\"email\" placeholder=\"Email\" required=\"required\"
+        />\r\n                    <input type=\"submit\" value=\"Get Help\" />\r\n\t\t\t\t</form>\r\n
+        \               <div id=\"familyformsuccess\" style=\"display:none;\"><strong>Thank
+        you!</strong><br />\r\n\t\t\t\t\tYour feedback will help us improve our website!\r\n
+        \               </div>\r\n            \r\n\t\t\t\r\n\t\t\t<script>\r\n            $(document).ready(
+        function() {\r\n                var form = $('#familyform');\r\n                \r\n
+        \               $(form).submit(function( event ) {\r\n                    var
+        values = form.serialize();\r\n                                \r\n                    $.ajax({\r\n
+        \                       data: values,\r\n                        success:
+        function(response) { \r\n                            $('#familyform').hide();\r\n
+        \                           $('#familyformsuccess').show();\r\n                       }\r\n
+        \                   })\r\n            \r\n                    return;\r\n
+        \               });\r\n            } );\r\n            </script>                       \r\n
+        \                \r\n                    \r\n                    \r\n                    \r\n
+        \      \r\n                    \r\n                    \r\n                    \r\n
+        \                   \r\n                                        <div class=\"clear\"></div>
+        \r\n\t\t\t\t\t<p>\r\n                        \r\n\t\t\t\t\t</p>       \r\n
+        \                       <br />\r\n                        <br />\r\n                    </div>\r\n
+        \                   <div class=\"clear\"></div>\r\n              \r\n\r\n\r\n\r\n<div
+        id=\"grey_bar\"><strong>Post Comment OR Correction</strong></div> <br />\r\n<font
+        color=\"red\">If you need assistance call Changing Lives directly at: <b>410-940-7498</b></font><br
+        />\r\n<b>Posting Comments below is for viewers on this website only. </b>
+        If you have information that can help users regarding Changing Lives, please
+        provide it below.<br /><br />\r\n<b>Post Comment OR Correction</b><br />\r\n\r\n\r\n<form
+        id=\"form\" action=\"http://www.shelterlistings.org/let_us_know.php\" method=\"post\"
+        name=\"form1\">\r\n<INPUT TYPE=hidden NAME=shelter VALUE=\"38685\">\r\nName:
+        \r\n                      <input name=\"name\" type=\"text\" value=\"\" size=\"35\"
+        maxlength=\"35\" />\r\n                      <br>\r\n                      <br>\r\nEmail
+        Address:\r\n                      <input name=\"email\" type=\"text\" value=\"\"
+        size=\"35\" maxlength=\"70\" />\r\n                      <br>\r\n                      <br>\r\nMessage:
+        <br/>\r\n\r\n                      <textarea name=\"message\" cols=\"50\"
+        rows=\"10\"></textarea>\r\n                      <br />\r\n\r\n\r\n\r\n\t\t\t<br
+        />  <img src=\"http://www.shelterlistings.org/images/miguel.jpg\"><br />\r\n\t\t\t
+        Answer Above Math Problem:\r\n                      <input name=\"math\" type=\"text\"
+        value=\"\" size=\"3\" maxlength=\"3\" />\r\n                      <br>\r\n
+        \                     <br>\r\n\r\n\r\n\r\n\r\n                      <p align=\"left\">\r\n
+        \                       <br>\r\n                        \r\n                        <input
+        name=\"image\" type=\"image\" src=\"http://www.shelterlistings.org/images/send.gif\">\r\n
+        \                  \r\n                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\r\n\r\n\r\n</form>\r\n\r\n\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\r\n\t\t\r\n\t\t</div><!--#content-->\r\n\r\n\r\n\t\t<!--
+        Sidebar -->\r\n\t\t<div id=\"sidebar\" class=\"grid4\">\r\n\t\t\r\n\r\n\t\t\r\n\t\r\n\t\r\n\r\n<br
+        />\r\n\t\r\n<div id=\"map_canvas\" style=\"width: 300px; height: 400px\"></div>\r\n\t\r\n\t\t
+        \     \r\n\t\t\r\n\r\n\r\n\t\t\t<br /><br />\r\n\r\n\t\t\t\r\n\t\t\t<div class=\"pane\">\r\n\t\t\t\r\n\t\t\t\t\r\n\t\t\t\r\n\t\t\t\t\r\n\t\t\t\t\r\n\t\r\n\t\t\t\t\r\n\t\t\t\t\r\n\t\t\t</div>\r\n\r\n\r\n\r\n\r\n\t\t\t\t\t\t<script
+        async src=\"//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js\"></script>\r\n<!--
+        rightnaveresponsive -->\r\n<ins class=\"adsbygoogle\"\r\n     style=\"display:block\"\r\n
+        \    data-ad-client=\"ca-pub-3544286905190479\"\r\n     data-ad-slot=\"2516362770\"\r\n
+        \    data-ad-format=\"auto\"></ins>\r\n<script>\r\n(adsbygoogle = window.adsbygoogle
+        || []).push({});\r\n</script>\r\n                 \r\n                \r\n\t\t\t\t\t\t\r\n\t\t\r\n\r\n\t\r\n\t\t\r\n\t\t</div><!--sidebar-->\r\n\t\t\r\n\t\t<div
+        class=\"clear\"></div>\r\n\t</div><!--wrapper-->\r\n\r\n\r\n\t\r\n\t\r\n\t\r\n\t<div
+        id=\"footer\" class=\"container\">\r\n\t\t<div class=\"wrapper\">\r\n\t\t\r\n\t<script
+        type=\"text/javascript\">\r\n\r\n\t  var _gaq = _gaq || [];\r\n\t  _gaq.push(['_setAccount',
+        'UA-24843197-2']);\r\n\t  _gaq.push(['_trackPageview']);\r\n\r\n\t  (function()
+        {\r\n\t    var ga = document.createElement('script'); ga.type = 'text/javascript';
+        ga.async = true;\r\n\t    ga.src = ('https:' == document.location.protocol
+        ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';\r\n\t    var
+        s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga,
+        s);\r\n\t  })();\r\n\r\n\t</script>\r\n\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t<!--
+        Footer Copyright -->\r\n\t\t\t<p class=\"fr\">Copyright &copy; 2017 <span>&middot;</span>
+        ShelterListings.org <span>&middot;</span> All Rights Reserved</p>\r\n\t\t\t<div
+        clas"
+    http_version: 
+  recorded_at: Sat, 20 May 2017 17:52:13 GMT
+- request:
+    method: get
+    uri: http://maps.googleapis.com/maps/api/geocode/json?language=en&latlng=39.3236830,-76.5690640&sensor=false
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Sat, 20 May 2017 15:41:39 GMT
+      Expires:
+      - Sun, 21 May 2017 15:41:39 GMT
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - mafe
+      Content-Length:
+      - '1508'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Cache-Control:
+      - public, max-age=86400
+      Age:
+      - '7834'
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+           "results" : [
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "3104",
+                       "short_name" : "3104",
+                       "types" : [ "street_number" ]
+                    },
+                    {
+                       "long_name" : "Pelham Avenue",
+                       "short_name" : "Pelham Ave",
+                       "types" : [ "route" ]
+                    },
+                    {
+                       "long_name" : "Belair - Edison",
+                       "short_name" : "Belair - Edison",
+                       "types" : [ "neighborhood", "political" ]
+                    },
+                    {
+                       "long_name" : "Baltimore",
+                       "short_name" : "Baltimore",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "Maryland",
+                       "short_name" : "MD",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    },
+                    {
+                       "long_name" : "21213",
+                       "short_name" : "21213",
+                       "types" : [ "postal_code" ]
+                    },
+                    {
+                       "long_name" : "1745",
+                       "short_name" : "1745",
+                       "types" : [ "postal_code_suffix" ]
+                    }
+                 ],
+                 "formatted_address" : "3104 Pelham Ave, Baltimore, MD 21213, USA",
+                 "geometry" : {
+                    "location" : {
+                       "lat" : 39.323683,
+                       "lng" : -76.569064
+                    },
+                    "location_type" : "ROOFTOP",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 39.3250319802915,
+                          "lng" : -76.56771501970849
+                       },
+                       "southwest" : {
+                          "lat" : 39.3223340197085,
+                          "lng" : -76.57041298029151
+                       }
+                    }
+                 },
+                 "place_id" : "ChIJNZf81coFyIkR4tT-p7w-G2Q",
+                 "types" : [ "street_address" ]
+              },
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "Belair - Edison",
+                       "short_name" : "Belair - Edison",
+                       "types" : [ "neighborhood", "political" ]
+                    },
+                    {
+                       "long_name" : "Baltimore",
+                       "short_name" : "Baltimore",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "Baltimore County",
+                       "short_name" : "Baltimore County",
+                       "types" : [ "administrative_area_level_2", "political" ]
+                    },
+                    {
+                       "long_name" : "Maryland",
+                       "short_name" : "MD",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    }
+                 ],
+                 "formatted_address" : "Belair - Edison, Baltimore, MD, USA",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : 39.3281079,
+                          "lng" : -76.5556871
+                       },
+                       "southwest" : {
+                          "lat" : 39.3131069,
+                          "lng" : -76.5949883
+                       }
+                    },
+                    "location" : {
+                       "lat" : 39.321528,
+                       "lng" : -76.57483089999999
+                    },
+                    "location_type" : "APPROXIMATE",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 39.3281079,
+                          "lng" : -76.5556871
+                       },
+                       "southwest" : {
+                          "lat" : 39.3131069,
+                          "lng" : -76.5949883
+                       }
+                    }
+                 },
+                 "place_id" : "ChIJ257RtksEyIkRdJk_gmxhtdc",
+                 "types" : [ "neighborhood", "political" ]
+              },
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "Baltimore",
+                       "short_name" : "Baltimore",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "Maryland",
+                       "short_name" : "MD",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    }
+                 ],
+                 "formatted_address" : "Baltimore, MD, USA",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : 39.3722059,
+                          "lng" : -76.5294528
+                       },
+                       "southwest" : {
+                          "lat" : 39.1972069,
+                          "lng" : -76.71151909999999
+                       }
+                    },
+                    "location" : {
+                       "lat" : 39.2903848,
+                       "lng" : -76.6121893
+                    },
+                    "location_type" : "APPROXIMATE",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 39.3722059,
+                          "lng" : -76.5294528
+                       },
+                       "southwest" : {
+                          "lat" : 39.1972069,
+                          "lng" : -76.71151909999999
+                       }
+                    }
+                 },
+                 "place_id" : "ChIJt4P01q4DyIkRWOcjQqiWSAQ",
+                 "types" : [ "locality", "political" ]
+              },
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "21213",
+                       "short_name" : "21213",
+                       "types" : [ "postal_code" ]
+                    },
+                    {
+                       "long_name" : "Baltimore",
+                       "short_name" : "Baltimore",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "Maryland",
+                       "short_name" : "MD",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    }
+                 ],
+                 "formatted_address" : "Baltimore, MD 21213, USA",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : 39.3338561,
+                          "lng" : -76.5489379
+                       },
+                       "southwest" : {
+                          "lat" : 39.301682,
+                          "lng" : -76.602566
+                       }
+                    },
+                    "location" : {
+                       "lat" : 39.3179648,
+                       "lng" : -76.56616219999999
+                    },
+                    "location_type" : "APPROXIMATE",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 39.3338561,
+                          "lng" : -76.5489379
+                       },
+                       "southwest" : {
+                          "lat" : 39.301682,
+                          "lng" : -76.602566
+                       }
+                    }
+                 },
+                 "place_id" : "ChIJRf5VoUgEyIkRDPTlnC4tfzM",
+                 "types" : [ "postal_code" ]
+              },
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "Baltimore Metropolitan Area",
+                       "short_name" : "Baltimore Metropolitan Area",
+                       "types" : [ "political" ]
+                    },
+                    {
+                       "long_name" : "Maryland",
+                       "short_name" : "MD",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    }
+                 ],
+                 "formatted_address" : "Baltimore Metropolitan Area, MD, USA",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : 39.7213135,
+                          "lng" : -75.7476679
+                       },
+                       "southwest" : {
+                          "lat" : 38.7135565,
+                          "lng" : -77.31150699999999
+                       }
+                    },
+                    "location" : {
+                       "lat" : 39.4432305,
+                       "lng" : -76.5488232
+                    },
+                    "location_type" : "APPROXIMATE",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 39.7213176,
+                          "lng" : -75.7476679
+                       },
+                       "southwest" : {
+                          "lat" : 38.7135565,
+                          "lng" : -77.31150699999999
+                       }
+                    }
+                 },
+                 "place_id" : "ChIJRZ7DhLkFyIkRTbycET7hmIo",
+                 "types" : [ "political" ]
+              },
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "Baltimore Metropolitan Area",
+                       "short_name" : "Baltimore Metropolitan Area",
+                       "types" : [ "political" ]
+                    },
+                    {
+                       "long_name" : "Maryland",
+                       "short_name" : "MD",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    }
+                 ],
+                 "formatted_address" : "Baltimore Metropolitan Area, MD, USA",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : 39.72150389999999,
+                          "lng" : -75.74771
+                       },
+                       "southwest" : {
+                          "lat" : 38.711099,
+                          "lng" : -77.311419
+                       }
+                    },
+                    "location" : {
+                       "lat" : 39.372594,
+                       "lng" : -76.64127119999999
+                    },
+                    "location_type" : "APPROXIMATE",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 39.72150389999999,
+                          "lng" : -75.74771
+                       },
+                       "southwest" : {
+                          "lat" : 38.711099,
+                          "lng" : -77.311419
+                       }
+                    }
+                 },
+                 "place_id" : "ChIJ_w3VaQQ3yIkRRJuTo4C_fsE",
+                 "types" : [ "political" ]
+              },
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "Maryland",
+                       "short_name" : "MD",
+                       "types" : [
+                          "administrative_area_level_1",
+                          "establishment",
+                          "point_of_interest",
+                          "political"
+                       ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    }
+                 ],
+                 "formatted_address" : "Maryland, USA",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : 39.723037,
+                          "lng" : -74.98628189999999
+                       },
+                       "southwest" : {
+                          "lat" : 37.8866049,
+                          "lng" : -79.48765109999999
+                       }
+                    },
+                    "location" : {
+                       "lat" : 39.0457549,
+                       "lng" : -76.64127119999999
+                    },
+                    "location_type" : "APPROXIMATE",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 39.7231319,
+                          "lng" : -75.04935399999999
+                       },
+                       "southwest" : {
+                          "lat" : 37.8901741,
+                          "lng" : -79.487274
+                       }
+                    }
+                 },
+                 "place_id" : "ChIJ35Dx6etNtokRsfZVdmU3r_I",
+                 "types" : [
+                    "administrative_area_level_1",
+                    "establishment",
+                    "point_of_interest",
+                    "political"
+                 ]
+              },
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    }
+                 ],
+                 "formatted_address" : "United States",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : 71.5388001,
+                          "lng" : -66.885417
+                       },
+                       "southwest" : {
+                          "lat" : 18.7763,
+                          "lng" : 170.5957
+                       }
+                    },
+                    "location" : {
+                       "lat" : 37.09024,
+                       "lng" : -95.712891
+                    },
+                    "location_type" : "APPROXIMATE",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 49.38,
+                          "lng" : -66.94
+                       },
+                       "southwest" : {
+                          "lat" : 25.82,
+                          "lng" : -124.39
+                       }
+                    }
+                 },
+                 "place_id" : "ChIJCzYy5IS16lQRQrfeQ5K5Oxw",
+                 "types" : [ "country", "political" ]
+              },
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "BELAIR RD & CHESTERFIELD AVE nb",
+                       "short_name" : "BELAIR RD & CHESTERFIELD AVE nb",
+                       "types" : [
+                          "bus_station",
+                          "establishment",
+                          "point_of_interest",
+                          "transit_station"
+                       ]
+                    },
+                    {
+                       "long_name" : "Belair - Edison",
+                       "short_name" : "Belair - Edison",
+                       "types" : [ "neighborhood", "political" ]
+                    },
+                    {
+                       "long_name" : "Baltimore",
+                       "short_name" : "Baltimore",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "Maryland",
+                       "short_name" : "MD",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    },
+                    {
+                       "long_name" : "21213",
+                       "short_name" : "21213",
+                       "types" : [ "postal_code" ]
+                    }
+                 ],
+                 "formatted_address" : "BELAIR RD & CHESTERFIELD AVE nb, Baltimore, MD 21213, USA",
+                 "geometry" : {
+                    "location" : {
+                       "lat" : 39.324499,
+                       "lng" : -76.569682
+                    },
+                    "location_type" : "APPROXIMATE",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 39.32584798029149,
+                          "lng" : -76.56833301970849
+                       },
+                       "southwest" : {
+                          "lat" : 39.32315001970849,
+                          "lng" : -76.5710309802915
+                       }
+                    }
+                 },
+                 "place_id" : "ChIJl4MQ3coFyIkRw3jp-rOL4R4",
+                 "types" : [
+                    "bus_station",
+                    "establishment",
+                    "point_of_interest",
+                    "transit_station"
+                 ]
+              }
+           ],
+           "status" : "OK"
+        }
+    http_version: 
+  recorded_at: Sat, 20 May 2017 17:52:13 GMT
+recorded_with: VCR 3.0.3

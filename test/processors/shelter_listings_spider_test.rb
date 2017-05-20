@@ -16,6 +16,7 @@ class ShelterListingsSpiderTest < ActiveSupport::TestCase
     expected = "3104 Pelham Avenue Belair - Edison Baltimore Maryland United States 21213 1745"
 
     slist = ShelterListingsSpider.new
+
     VCR.use_cassette("shelter listings spider") do 
       doc = Nokogiri::HTML(open(MyUrl))
       address = slist.send :extract_shelterlistings_address, doc
