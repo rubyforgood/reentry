@@ -16,16 +16,19 @@ class DOJProcessorTest < ActiveSupport::TestCase
         domain.perform_processor
       end
 
-      relation = Location
-                 .where(domain: domain)
-                 .where.not(name: nil)
-                 .order(:name)
+      names = Location
+              .where(domain: domain)
+              .where.not(name: nil)
+              .select(:name)
+              .map(&:name)
+              .sort
+              .reject(&:empty?)
 
-      assert_equal 'AAMC Community Health Center',
-                   relation.first.name
+      assert_equal '* Crisis Hotline',
+                   names.first
 
       assert_equal 'Youth Empowered Society (YES) Drop- In Center',
-                   relation.last(2).first.name
+                   names.last
     end
   end
 end
