@@ -1,21 +1,28 @@
-class Loader
+class LocationLoader
   Result = ImmutableStruct.new :success?, :error
   ERROR_MESSAGE = 'ERROR: Processor::Loader.load! transaction failed!'
 
-  def self.load!(data, klass: Location, **kwargs)
+  def self.load!(data, **kwargs)
     begin
       ActiveRecord::Base.transaction do
         data.each do |record|
-          klass.find_or_create_by!(
+          location = Location.find_or_create_by!(
             county:           record[:county],
             name:             record[:name],
             address:          record[:address],
-            phone:            record[:phone],
             website:          record[:website],
             services:         record[:services],
             type_of_services: record[:type],
             **kwargs
           )
+
+          record[:phone].each_with_index do |phone_number, index|
+            PhoneNumber.find_or_create_by!(
+              number: phone_number,
+              kind: "main #{index+1}",
+              location_id: location.id
+            )
+          end
         end
       end
     rescue ActiveRecord::RecordInvalid
