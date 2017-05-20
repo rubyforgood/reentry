@@ -1,0 +1,24 @@
+<%= form_for(@location) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name, class: 'form-control' %>
+
+  <%= f.label :county %>
+  <%= f.text_field :county, class: 'form-control' %>
+
+  <%= f.label :address %>
+  <%= f.text_field :address, class: 'form-control' %>
+
+  <%= f.label :phone %>
+  <%= f.text_field :phone, class: 'form-control' %>
+
+  <%= f.label :website %>
+  <%= f.text_field :website, class: 'form-control' %>
+
+  <%= f.label :services %>
+  <%= f.text_field :services, class: 'form-control' %>
+
+  <%= f.label :type_of_services %>
+  <%= f.text_field :type_of_services, class: 'form-control' %>
+
+  <%= f.submit "Save changes", class: 'btn btn-primary' %>
+<% end %>
