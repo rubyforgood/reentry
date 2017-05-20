@@ -221,4 +221,528 @@ http_interactions:
         clas"
     http_version: 
   recorded_at: Sat, 20 May 2017 16:22:37 GMT
+- request:
+    method: get
+    uri: http://maps.googleapis.com/maps/api/geocode/json?language=en&latlng=39.5092190,-76.1618710&sensor=false
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Sat, 20 May 2017 14:09:20 GMT
+      Expires:
+      - Sun, 21 May 2017 14:09:20 GMT
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - mafe
+      Content-Length:
+      - '1468'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Cache-Control:
+      - public, max-age=86400
+      Age:
+      - '23188'
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+           "results" : [
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "53",
+                       "short_name" : "53",
+                       "types" : [ "street_number" ]
+                    },
+                    {
+                       "long_name" : "East Bel Air Avenue",
+                       "short_name" : "E Bel Air Ave",
+                       "types" : [ "route" ]
+                    },
+                    {
+                       "long_name" : "Aberdeen",
+                       "short_name" : "Aberdeen",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "2, Halls Cross Roads",
+                       "short_name" : "2, Halls Cross Roads",
+                       "types" : [ "administrative_area_level_3", "political" ]
+                    },
+                    {
+                       "long_name" : "Harford County",
+                       "short_name" : "Harford County",
+                       "types" : [ "administrative_area_level_2", "political" ]
+                    },
+                    {
+                       "long_name" : "Maryland",
+                       "short_name" : "MD",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    },
+                    {
+                       "long_name" : "21001",
+                       "short_name" : "21001",
+                       "types" : [ "postal_code" ]
+                    }
+                 ],
+                 "formatted_address" : "53 E Bel Air Ave, Aberdeen, MD 21001, USA",
+                 "geometry" : {
+                    "location" : {
+                       "lat" : 39.509219,
+                       "lng" : -76.16187099999999
+                    },
+                    "location_type" : "ROOFTOP",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 39.5105679802915,
+                          "lng" : -76.16052201970848
+                       },
+                       "southwest" : {
+                          "lat" : 39.50787001970851,
+                          "lng" : -76.1632199802915
+                       }
+                    }
+                 },
+                 "place_id" : "ChIJkbvWCJrBx4kRYfX-53zblv4",
+                 "types" : [ "street_address" ]
+              },
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "Aberdeen",
+                       "short_name" : "Aberdeen",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "2, Halls Cross Roads",
+                       "short_name" : "2, Halls Cross Roads",
+                       "types" : [ "administrative_area_level_3", "political" ]
+                    },
+                    {
+                       "long_name" : "Harford County",
+                       "short_name" : "Harford County",
+                       "types" : [ "administrative_area_level_2", "political" ]
+                    },
+                    {
+                       "long_name" : "Maryland",
+                       "short_name" : "MD",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    }
+                 ],
+                 "formatted_address" : "Aberdeen, MD, USA",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : 39.5473881,
+                          "lng" : -76.12807309999999
+                       },
+                       "southwest" : {
+                          "lat" : 39.4841889,
+                          "lng" : -76.2060939
+                       }
+                    },
+                    "location" : {
+                       "lat" : 39.5095556,
+                       "lng" : -76.16411970000001
+                    },
+                    "location_type" : "APPROXIMATE",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 39.5473881,
+                          "lng" : -76.12807309999999
+                       },
+                       "southwest" : {
+                          "lat" : 39.4841889,
+                          "lng" : -76.2060939
+                       }
+                    }
+                 },
+                 "place_id" : "ChIJAeMIvYXBx4kRdLSNqBgdFj4",
+                 "types" : [ "locality", "political" ]
+              },
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "21001",
+                       "short_name" : "21001",
+                       "types" : [ "postal_code" ]
+                    },
+                    {
+                       "long_name" : "Aberdeen",
+                       "short_name" : "Aberdeen",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "Harford County",
+                       "short_name" : "Harford County",
+                       "types" : [ "administrative_area_level_2", "political" ]
+                    },
+                    {
+                       "long_name" : "Maryland",
+                       "short_name" : "MD",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    }
+                 ],
+                 "formatted_address" : "Aberdeen, MD 21001, USA",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : 39.56666,
+                          "lng" : -76.138245
+                       },
+                       "southwest" : {
+                          "lat" : 39.349664,
+                          "lng" : -76.260313
+                       }
+                    },
+                    "location" : {
+                       "lat" : 39.5123182,
+                       "lng" : -76.18996609999999
+                    },
+                    "location_type" : "APPROXIMATE",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 39.56666,
+                          "lng" : -76.138245
+                       },
+                       "southwest" : {
+                          "lat" : 39.349664,
+                          "lng" : -76.260313
+                       }
+                    }
+                 },
+                 "place_id" : "ChIJ2QcprTnCx4kRFr6HXDAcXwE",
+                 "types" : [ "postal_code" ]
+              },
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "2, Halls Cross Roads",
+                       "short_name" : "2, Halls Cross Roads",
+                       "types" : [ "administrative_area_level_3", "political" ]
+                    },
+                    {
+                       "long_name" : "Harford County",
+                       "short_name" : "Harford County",
+                       "types" : [ "administrative_area_level_2", "political" ]
+                    },
+                    {
+                       "long_name" : "Maryland",
+                       "short_name" : "MD",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    }
+                 ],
+                 "formatted_address" : "2, Halls Cross Roads, MD, USA",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : 39.623786,
+                          "lng" : -76.035766
+                       },
+                       "southwest" : {
+                          "lat" : 39.324897,
+                          "lng" : -76.257677
+                       }
+                    },
+                    "location" : {
+                       "lat" : 39.4573356,
+                       "lng" : -76.15518659999999
+                    },
+                    "location_type" : "APPROXIMATE",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 39.623786,
+                          "lng" : -76.0598818
+                       },
+                       "southwest" : {
+                          "lat" : 39.3500315,
+                          "lng" : -76.25334669999999
+                       }
+                    }
+                 },
+                 "place_id" : "ChIJ6UbvBsfBx4kRCZv2YVSM9Ik",
+                 "types" : [ "administrative_area_level_3", "political" ]
+              },
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "Harford County",
+                       "short_name" : "Harford County",
+                       "types" : [ "administrative_area_level_2", "political" ]
+                    },
+                    {
+                       "long_name" : "Maryland",
+                       "short_name" : "MD",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    }
+                 ],
+                 "formatted_address" : "Harford County, MD, USA",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : 39.72150389999999,
+                          "lng" : -76.035766
+                       },
+                       "southwest" : {
+                          "lat" : 39.254104,
+                          "lng" : -76.569389
+                       }
+                    },
+                    "location" : {
+                       "lat" : 39.5838964,
+                       "lng" : -76.36372849999999
+                    },
+                    "location_type" : "APPROXIMATE",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 39.72150389999999,
+                          "lng" : -76.0598818
+                       },
+                       "southwest" : {
+                          "lat" : 39.2742865,
+                          "lng" : -76.569389
+                       }
+                    }
+                 },
+                 "place_id" : "ChIJ-TfZvkTnx4kRgIG5NP-f8_4",
+                 "types" : [ "administrative_area_level_2", "political" ]
+              },
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "Baltimore Metropolitan Area",
+                       "short_name" : "Baltimore Metropolitan Area",
+                       "types" : [ "political" ]
+                    },
+                    {
+                       "long_name" : "Maryland",
+                       "short_name" : "MD",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    }
+                 ],
+                 "formatted_address" : "Baltimore Metropolitan Area, MD, USA",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : 39.7213135,
+                          "lng" : -75.7476679
+                       },
+                       "southwest" : {
+                          "lat" : 38.7135565,
+                          "lng" : -77.31150699999999
+                       }
+                    },
+                    "location" : {
+                       "lat" : 39.4432305,
+                       "lng" : -76.5488232
+                    },
+                    "location_type" : "APPROXIMATE",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 39.7213176,
+                          "lng" : -75.7476679
+                       },
+                       "southwest" : {
+                          "lat" : 38.7135565,
+                          "lng" : -77.31150699999999
+                       }
+                    }
+                 },
+                 "place_id" : "ChIJRZ7DhLkFyIkRTbycET7hmIo",
+                 "types" : [ "political" ]
+              },
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "Baltimore Metropolitan Area",
+                       "short_name" : "Baltimore Metropolitan Area",
+                       "types" : [ "political" ]
+                    },
+                    {
+                       "long_name" : "Maryland",
+                       "short_name" : "MD",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    }
+                 ],
+                 "formatted_address" : "Baltimore Metropolitan Area, MD, USA",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : 39.72150389999999,
+                          "lng" : -75.74771
+                       },
+                       "southwest" : {
+                          "lat" : 38.711099,
+                          "lng" : -77.311419
+                       }
+                    },
+                    "location" : {
+                       "lat" : 39.372594,
+                       "lng" : -76.64127119999999
+                    },
+                    "location_type" : "APPROXIMATE",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 39.72150389999999,
+                          "lng" : -75.74771
+                       },
+                       "southwest" : {
+                          "lat" : 38.711099,
+                          "lng" : -77.311419
+                       }
+                    }
+                 },
+                 "place_id" : "ChIJ_w3VaQQ3yIkRRJuTo4C_fsE",
+                 "types" : [ "political" ]
+              },
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "Maryland",
+                       "short_name" : "MD",
+                       "types" : [
+                          "administrative_area_level_1",
+                          "establishment",
+                          "point_of_interest",
+                          "political"
+                       ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    }
+                 ],
+                 "formatted_address" : "Maryland, USA",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : 39.723037,
+                          "lng" : -74.98628189999999
+                       },
+                       "southwest" : {
+                          "lat" : 37.8866049,
+                          "lng" : -79.48765109999999
+                       }
+                    },
+                    "location" : {
+                       "lat" : 39.0457549,
+                       "lng" : -76.64127119999999
+                    },
+                    "location_type" : "APPROXIMATE",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 39.7231319,
+                          "lng" : -75.04935399999999
+                       },
+                       "southwest" : {
+                          "lat" : 37.8901741,
+                          "lng" : -79.487274
+                       }
+                    }
+                 },
+                 "place_id" : "ChIJ35Dx6etNtokRsfZVdmU3r_I",
+                 "types" : [
+                    "administrative_area_level_1",
+                    "establishment",
+                    "point_of_interest",
+                    "political"
+                 ]
+              },
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    }
+                 ],
+                 "formatted_address" : "United States",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : 71.5388001,
+                          "lng" : -66.885417
+                       },
+                       "southwest" : {
+                          "lat" : 18.7763,
+                          "lng" : 170.5957
+                       }
+                    },
+                    "location" : {
+                       "lat" : 37.09024,
+                       "lng" : -95.712891
+                    },
+                    "location_type" : "APPROXIMATE",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 49.38,
+                          "lng" : -66.94
+                       },
+                       "southwest" : {
+                          "lat" : 25.82,
+                          "lng" : -124.39
+                       }
+                    }
+                 },
+                 "place_id" : "ChIJCzYy5IS16lQRQrfeQ5K5Oxw",
+                 "types" : [ "country", "political" ]
+              }
+           ],
+           "status" : "OK"
+        }
+    http_version: 
+  recorded_at: Sat, 20 May 2017 20:35:48 GMT
 recorded_with: VCR 3.0.3

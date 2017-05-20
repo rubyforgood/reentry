@@ -28,18 +28,12 @@ class ShelterListingsProcessorTest < ActiveSupport::TestCase
         end
       end 
 
-      # it '.extract_data_from_details_page returns a data hash' do
-      #   data_hash = ShelterListingsProcessor.new.extract_data_from_details_page(details_url: details_page_url)
-      #   assert data_hash.is_a? Hash
-      # end
-
-      # describe '.store_location' do 
-      #   it '.extract_shelterlistings_address extracts an address' do 
-      #   end
-
-      #   it '.store_location create a location record' do 
-      #   end 
-      # end
+      it '.extract_data_from_details_page returns a data hash' do
+        VCR.use_cassette('shelter_listings_details_html') do
+          data_hash = ShelterListingsProcessor.new.extract_data_from_details_page(details_url: details_page_url)
+          assert data_hash.is_a? Hash
+        end
+      end
 
     end
 

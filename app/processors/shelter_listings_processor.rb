@@ -31,7 +31,7 @@ class ShelterListingsProcessor < PerformSpider
 		links_array.each do |link|
 			html_doc = get_website_html(url: link)
 			extracted_data = extract_data(html: html_doc, css_selectors: 'table tr td a')
-			detail_links << extracted_data[0]['href'] unless extracted_data.nil?
+			detail_links << extracted_data[0]['href'] if !extracted_data.nil? && extracted_data[0] && extracted_data[0]['href']
 
 			puts "count detail_links  #{detail_links.count}"
 		end
@@ -43,23 +43,26 @@ class ShelterListingsProcessor < PerformSpider
 		html_doc = get_website_html(url: details_url)
 		
 		final_data[:name] = extract_data(html: html_doc, css_selectors: '.post.page-content h2').children.first.text
-		address_hash = extract_shelterlistings_address(doc_html: html_doc)
-		final_data[:address] = address_hash.data["formatted_address"]
+		address_hash = extract_shelterlistings_address(html_doc)
+		final_data[:address] = address_hash["address"]
 		if extract_data(html: html_doc, css_selectors: '.post.page-content br').try(:next)
 			final_data[:phone] = extract_data(html: html_doc, css_selectors: '.post.page-content br').next.text.strip
 		end
 		final_data[:website] = details_url
 		final_data[:county] = 'USA'
 		final_data[:type_of_services] = 'Housing'	
-		final_data[:latitude] = address_hash.data['geometry']['location']['lat']
-		final_data[:longitude] = address_hash.data['geometry']['location']['lng']
+		final_data[:latitude] = address_hash['lat']
+		final_data[:longitude] = address_hash['lng']
 		final_data
 	end
 
-	def extract_shelterlistings_address(doc_html: raise)
-		google_map_js = doc_html.css("script")[9].text
-		lat, lng = google_map_js.scan(/-?\d+\.\d+/); 
-		geo_localization = "#{lat},#{lng}"
-		query = Geocoder.search(geo_localization).first.data
-	end
+   def extract_shelterlistings_address(doc_html)
+        google_map_js = extract_data(html: doc_html, css_selectors: 'script')[9].text
+        lat, lng = google_map_js.scan(/-?\d+\.\d+/); 
+        geo_localization = "#{lat},#{lng}"
+        query = Geocoder.search(geo_localization).first
+        output = { 'address' => query.data["formatted_address"],
+        'lat' => query.data["geometry"]["location"]["lat"],
+        'lng' => query.data["geometry"]["location"]["lng"]  }
+    end
 end
