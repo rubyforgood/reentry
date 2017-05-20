@@ -10,9 +10,6 @@ class ShelterListingsProcessorTest < ActiveSupport::TestCase
   
   describe '.perform' do
     describe '.run_shelter_listings_spider' do
-      # it '.run_shelter_listings_spider' do 
-      #   assert ShelterListingsProcessor.new.run_shelter_listings_spider(domain_url: 'http://www.shelterlistings.org/state/maryland.html')
-      # end
 
       it '.get_list_of_cities returns an ary of city tags' do 
         VCR.use_cassette('shelter_listings_MD_html') do
@@ -35,7 +32,12 @@ class ShelterListingsProcessorTest < ActiveSupport::TestCase
         end
       end
 
+      it '.extract_shelterlistings_address returns an address hash' do
+        # Ken will fill it :)
+      end
+
     end
 
   end
 end
+

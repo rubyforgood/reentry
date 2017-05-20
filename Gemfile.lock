@@ -209,6 +209,7 @@ DEPENDENCIES
   minitest-rails
   minitest-spec-rails
   mocha
+  nokogiri
   pg
   pry
   puma (~> 3.7)
