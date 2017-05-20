@@ -1,7 +1,7 @@
 
 class ShelterListingsProcessor < PerformSpider
 	def perform(domain_id)
-		domain = Domain.find(1)
+		domain = Domain.find(domain_id)
 		url = domain.url
 		run_shelter_listings_spider(domain_url: url)
 	end
@@ -12,7 +12,7 @@ class ShelterListingsProcessor < PerformSpider
 		details_links.each do |link| 
 			data_hash = extract_data_from_details_page(details_url:link)
 			loc = store_location(location_data_hash: data_hash)
-			Rails.logger.info "stored loc #{loc.id}"
+			Rails.logger.info "stored location" if loc
 		end
 	end
 
@@ -22,7 +22,7 @@ class ShelterListingsProcessor < PerformSpider
 		
 		link_tags = extract_data(html: html_doc, css_selectors: '.wrapper #content .post.page-content table a')
 
-		link_tags.each {|tag| city_links << tag['href'] }
+		link_tags.each {|tag| city_links << tag['href'] ; puts "count ciy links #{city_links.count}"}
 		city_links
 	end
 
@@ -31,6 +31,7 @@ class ShelterListingsProcessor < PerformSpider
 		links_array.each do |link|
 			html_doc = get_website_html(url: link)
 			detail_links << extract_data(html: html_doc, css_selectors: 'table tr td a')[0]['href']
+			puts "count detail_links  #{detail_links.count}"
 		end
 		detail_links
 	end
