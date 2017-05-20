@@ -43,15 +43,16 @@ class ShelterListingsProcessor < PerformSpider
 		html_doc = get_website_html(url: details_url)
 		
 		final_data[:name] = extract_data(html: html_doc, css_selectors: '.post.page-content h2').children.first.text
-		final_data[:address] = extract_shelterlistings_address(doc_html: html_doc)
+		address_hash = extract_shelterlistings_address(doc_html: html_doc)
+		final_data[:address] = address_hash.data["formatted_address"]
 		if extract_data(html: html_doc, css_selectors: '.post.page-content br').try(:next)
 			final_data[:phone] = extract_data(html: html_doc, css_selectors: '.post.page-content br').next.text.strip
 		end
 		final_data[:website] = details_url
 		final_data[:county] = 'USA'
 		final_data[:type_of_services] = 'Housing'	
-		final_data[:latitude] = 1
-		final_data[:longitude] = 2
+		final_data[:latitude] = address_hash.data['geometry']['location']['lat']
+		final_data[:longitude] = address_hash.data['geometry']['location']['lng']
 		final_data
 	end
 
