@@ -10,7 +10,7 @@ class PhoneNormalizer
       numbers_array = phone_data_string.split('/')
 
       numbers_array.map do |num|
-        partials     = num.split(' x')
+        partials     = num.split('x')
         phone_number = format_phone_number(PhoneNumber.new(nil, partials))
 
         PhoneNumber.new(phone_number, partials)
@@ -28,7 +28,8 @@ class PhoneNormalizer
     end
 
     def reformat_string_with_extension(phone_number)
-      "#{reformat_string(phone_number.partials.first)} ext: #{phone_number.extension}"
+      stripped_extension = phone_number.extension.gsub(/\D/, '')
+      "#{reformat_string(phone_number.partials.first)} ext: #{stripped_extension}"
     end
 
     def reformat_string(phone_number, formatted_as: PHONE_FORMATS)
