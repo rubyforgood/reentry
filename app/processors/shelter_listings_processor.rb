@@ -6,13 +6,14 @@ class ShelterListingsProcessor < PerformSpider
 	end
 
 	def run_shelter_listings_spider(domain_url: raise)
+		final_data = []
 		cities_list = get_list_of_cities(url: domain_url)
 		details_links = get_list_of_detail_links(links_array: cities_list)
 		details_links.each do |link| 
 			data_hash = extract_data_from_details_page(details_url:link)
-			loc = store_location(location_data_hash: data_hash)
-			Rails.logger.info "stored location" if loc
+			final_data << data_hash
 		end
+		final_data
 	end
 
 	def get_list_of_cities(url: raise)
@@ -29,7 +30,9 @@ class ShelterListingsProcessor < PerformSpider
 		detail_links = []
 		links_array.each do |link|
 			html_doc = get_website_html(url: link)
-			detail_links << extract_data(html: html_doc, css_selectors: 'table tr td a')[0]['href']
+			extracted_data = extract_data(html: html_doc, css_selectors: 'table tr td a')
+			detail_links << extracted_data[0]['href'] unless extracted_data.nil?
+
 			puts "count detail_links  #{detail_links.count}"
 		end
 		detail_links
@@ -47,22 +50,15 @@ class ShelterListingsProcessor < PerformSpider
 		final_data[:website] = details_url
 		final_data[:county] = 'USA'
 		final_data[:type_of_services] = 'Housing'	
+		final_data[:latitude] = 1
+		final_data[:longitude] = 2
 		final_data
-	end
-
-	def store_location(location_data_hash: raise)
-		loc = Location.new(location_data_hash)
-		begin 
-			return loc.save
-		rescue => e
-			Rails.logger.error "Error occured at #{_method_}: #{e}"
-		end
 	end
 
 	def extract_shelterlistings_address(doc_html: raise)
 		google_map_js = doc_html.css("script")[9].text
 		lat, lng = google_map_js.scan(/-?\d+\.\d+/); 
 		geo_localization = "#{lat},#{lng}"
-		query = Geocoder.search(geo_localization).first
+		query = Geocoder.search(geo_localization).first.data
 	end
 end
