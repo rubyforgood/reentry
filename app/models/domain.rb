@@ -1,6 +1,7 @@
 class Domain < ApplicationRecord
   PROCESSORS = {
-    'DOJProcessor' => DOJProcessor
+    'DOJProcessor' => DOJProcessor,
+    'BaltimoreProcessor' => BaltimoreProcessor
   }
 
   def perform_processor
