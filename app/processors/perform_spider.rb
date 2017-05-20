@@ -2,6 +2,8 @@ require 'open-uri'
 require 'nokogiri'
 
 class PerformSpider
+	# module_function
+
 	def get_website_html(url: raise)
 		Nokogiri::HTML(open(url))
 	end

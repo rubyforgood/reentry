@@ -1,48 +1,28 @@
 require 'test_helper'
 
-class DOJFetcherTest < ActiveSupport::TestCase
-  let(:fetcher) { DOJFetcher }
-
-  let(:domain) {
+class PerformSpiderTest < ActiveSupport::TestCase
+  let(:domain) do
     Domain.create(
-      url: 'https://www.justice.gov/usao-md/page/file/941351/download'
+      url: 'http://www.shelterlistings.org/state/maryland.html'
     )
-  }
+  end
 
-  describe '.fetch' do
-    it 'retrieves data from the DOJ PDF URL' do
-      csv_file = Rails.root + 'test/fixtures/files/doj-data.csv'
-      expected = File.read(csv_file)
+  let(:details_page_url) {'http://www.shelterlistings.org/details/31018/'}
+  
 
-      VCR.use_cassette('doj_pdf_fetcher') do
-        observed = File.read(fetcher.fetch(domain))
-        assert_equal expected.lines, observed.lines
-      end
+  describe '.get_website_html' do 
+    it 'get maryland page' do
+        VCR.use_cassette("shelter_listings_MD_html") do 
+          assert PerformSpider.new.get_website_html(url: domain.url)
+        end
+    end
+
+    it 'get details page' do
+        VCR.use_cassette("shelter_listings_details_html") do 
+          assert PerformSpider.new.get_website_html(url: details_page_url)
+        end
     end
   end
 end
 
 
-# require 'test_helper'
-
-# class DOJFetcherTest < ActiveSupport::TestCase
-#   let(:fetcher) { DOJFetcher }
-
-#   let(:domain) {
-#     Domain.create(
-#       url: 'https://www.justice.gov/usao-md/page/file/941351/download'
-#     )
-#   }
-
-#   describe '.fetch' do
-#     it 'retrieves data from the DOJ PDF URL' do
-#       csv_file = Rails.root + 'test/fixtures/files/doj-data.csv'
-#       expected = File.read(csv_file)
-
-#       VCR.use_cassette('doj_pdf_fetcher') do
-#         observed = File.read(fetcher.fetch(domain))
-#         assert_equal expected.lines, observed.lines
-#       end
-#     end
-#   end
-# end

@@ -1,63 +1,36 @@
 require 'test_helper'
 
-class DOJProcessorTest < ActiveSupport::TestCase
-  let(:domain) do
+class ShelterListingsProcessorTest < ActiveSupport::TestCase
+  let(:state_domain) do
     Domain.create(
-      kind: 'DOJProcessor',
-      url: 'https://www.justice.gov/usao-md/page/file/941351/download'
+      url: 'http://www.shelterlistings.org/state/maryland.html'
     )
   end
 
-  describe '#perform' do
-    it 'transforms and loads data from the DOJ PDF URL' do
-      skip('This test is slower') if ENV['TEST_FASTER']
+  let(:details_page_url) {'http://www.shelterlistings.org/details/31018/'}
+  
 
-      VCR.use_cassette('doj_pdf_fetcher') do
-        domain.perform_processor
-      end
-
-      relation = Location
-                 .where(domain: domain)
-                 .where.not(name: nil)
-                 .order(:name)
-
-      assert_equal 'AAMC Community Health Center',
-                   relation.first.name
-
-      assert_equal 'Youth Empowered Society (YES) Drop- In Center',
-                   relation.last(2).first.name
+  let(:shelter_listings_MD_page) do 
+    VCR.use_cassette("shelter_listings_MD_html") do 
+      assert PerformSpider.get_website_html(url: state_domain.url)
     end
   end
+
+  let(:shelter_listings_detail_page) do 
+    VCR.use_cassette("shelter_listings_details_page_html") do 
+      assert PerformSpider.get_website_html(url: details_page_url)
+    end
+  end
+
+  describe '.get_list_of_cities' do 
+    links_ary = 
+    get_list_of_detail_links(links_array: links_ary)
+  #   cities_list = get_list_of_cities(url: domain_url)
+  #   details_links = get_list_of_detail_links(links_array: cities_list)
+  #   details_links.each do |link| 
+  #     data_hash = extract_data_from_details_page(details_url:link)
+  #     loc = store_location(location_data_hash: data_hash)
+  #     Rails.logger.info "stored location" if loc
+  #   end
+  end
 end
-
-# require 'test_helper'
-
-# class DOJProcessorTest < ActiveSupport::TestCase
-#   let(:domain) do
-#     Domain.create(
-#       kind: 'DOJProcessor',
-#       url: 'https://www.justice.gov/usao-md/page/file/941351/download'
-#     )
-#   end
-
-#   describe '#perform' do
-#     it 'transforms and loads data from the DOJ PDF URL' do
-#       skip('This test is slower') if ENV['TEST_FASTER']
-
-#       VCR.use_cassette('doj_pdf_fetcher') do
-#         domain.perform_processor
-#       end
-
-#       relation = Location
-#                  .where(domain: domain)
-#                  .where.not(name: nil)
-#                  .order(:name)
-
-#       assert_equal 'AAMC Community Health Center',
-#                    relation.first.name
-
-#       assert_equal 'Youth Empowered Society (YES) Drop- In Center',
-#                    relation.last(2).first.name
-#     end
-#   end
-# end

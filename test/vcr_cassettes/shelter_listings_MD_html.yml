@@ -1,0 +1,262 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://www.shelterlistings.org/state/maryland.html
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 20 May 2017 16:16:56 GMT
+      Server:
+      - Apache
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - PHPSESSID=fe1ehdklmtt30fesam4s0dt9f5; path=/
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - text/html; charset=UTF-8
+    body:
+      encoding: UTF-8
+      string: "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\"\r\n\"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\r\n\r\n<html
+        xmlns=\"http://www.w3.org/1999/xhtml\" dir=\"ltr\" lang=\"en-US\">\r\n\r\n<head
+        profile=\"http://gmpg.org/xfn/11\">\r\n\r\n\t<!-- Meta & Title --> \r\n\t<meta
+        http-equiv=\"content-type\" content=\"text/html; charset=UTF-8\" />\r\n\t<title>Maryland
+        Homeless Shelter Listings, Halfway Houses</title>\r\n\t<meta name=\"description\"
+        content=\"Find Maryland Homeless Shelter Listings, Halfway Houses, Permanent
+        Affordable Low Income Housing.\" >\r\n\t<meta name=\"keywords\" content=\"MD
+        Homeless Shelter Listings,MD Halfway Houses,MD Permanent Affordable Housing\">\r\n\t<!--
+        CSS -->\r\n\t<link type=\"text/css\" rel=\"stylesheet\" href=\"http://www.shelterlistings.org/styles/style.css\"
+        media=\"screen\" />\r\n\r\n\r\n\r\n\t<!-- Javascript -->\r\n\t<script type=\"text/javascript\"
+        src=\"http://www.shelterlistings.org/js/jquery.min144.js\"></script>\r\n\t<script
+        type=\"text/javascript\" src=\"http://www.shelterlistings.org/js/jquery.tools.min.js\"></script>\r\n\t<script
+        type=\"text/javascript\" src=\"http://www.shelterlistings.org/js/superfish.js\"></script>\r\n\t<script
+        type=\"text/javascript\" src=\"http://www.shelterlistings.org/js/jquery.tipTip.min.js\"></script>\r\n\t<script
+        type=\"text/javascript\" src=\"http://www.shelterlistings.org/js/custom.js\"></script>\r\n
+        \    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"
+        />\r\n     <link type=\"text/css\" rel=\"stylesheet\" href=\"http://www.shelterlistings.org/styles/stylephones.css\"
+        media=\"screen\" />\r\n\t\r\n</head>\r\n\r\n\r\n<body>\r\n\r\n\t<div id=\"nav-top\">\r\n\t\t\r\n\t</div><!--#nav-top-->\r\n\t\t\r\n\r\n\t<div
+        id=\"header\">\r\n\t\t<div class=\"wrapper\">\r\n\t\r\n\t\t\t<!-- Image Based
+        Logo -->\r\n\t\t\t<br /><a href=\"http://www.shelterlistings.org\"><img src=\"http://www.shelterlistings.org/images/newlooklogo5.png\"
+        alt=\"Shelter Listings\" /></a>\r\n\t\t\t\r\n\t\t\t\r\n\t\t\r\n\t\t</div><!--#wrapper-->\r\n\t</div><!--#header-->\r\n\r\n\t\r\n\t<!--
+        Main Navigation Menu -->\r\n\t\t<div id=\"main-menu\">\r\n\t\t\t<div class=\"wrapper\">\r\n\t\t\t\r\n\t\t\t<ul>\r\n\t\t\t\t<li><a
+        href=\"http://www.shelterlistings.org\">Home</a></li>\r\n\t\t\t\t<li><a href=\"http://www.shelterlistings.org/about.html\">About
+        Us</a>\r\n\t\t\t\t<li><a href=\"http://www.shelterlistings.org/partner.html\">Partner
+        With Us</a></li>\r\n\t\t\t\t<li><a href=\"http://www.shelterlistings.org/new_location.php\">Add
+        A New Listing</a></li>\r\n\t\t\t\t<li><a href=\"http://www.shelterlistings.org/contact_us.php\">Contact
+        Us</a></li>\r\n\t\t\t\t<li><a href=\"http://www.shelterlistings.org/feedback.php\">Feedback</a></li>\r\n\t\t\t\t<li><a
+        href=\"http://www.shelterlistings.org/homeless_veterans.html\">Homeless Veterans</a></li>\r\n\t\t\t</ul>\r\n\t\t\t\r\n\t\t</div><!--#wrapper-->\r\n\t</div><!--#main-menu-->\r\n\t\r\n\r\n\t<div
+        class=\"wrapper\">\r\n\t\r\n\t\t<div id=\"content\" class=\"grid8 first\">\r\n\t\t\r\n\t\t\t<!--
+        Page Content -->\r\n\t\t\t<div class=\"post page-content\">\r\n\t\t\t<a href=\"http://www.shelterlistings.org/\"
+        title=\"Housing and Shelters\">Home</a> &raquo; Maryland Shelter Listings\r\n\t\t\t\t<br
+        /><br /><br />\r\n\t\t\t\t<h3>Homeless Shelter Listings and Supportive Housing</h3>\r\n\t\t\t\t<h4>Maryland
+        List of housing resources we have uncovered: Homeless Shelters, Supportive
+        Housing, Halfway Housing, Transitional Housing, Day Shelters, Residential
+        Alcohol and Drug Treatment Centers.</h4>\r\n\r\n\r\n\r\n\r\n<br />\r\n <script
+        type=\"text/javascript\"><!--\r\ngoogle_ad_client = \"pub-3544286905190479\";\r\n/*
+        336x280, created 8/17/11 */\r\ngoogle_ad_slot = \"0227292876\";\r\ngoogle_ad_width
+        = 336;\r\ngoogle_ad_height = 280;\r\n//-->\r\n</script>\r\n<script type=\"text/javascript\"\r\nsrc=\"http://pagead2.googlesyndication.com/pagead/show_ads.js\">\r\n</script>\r\n<br
+        /><br />\r\n<!-- City search form start -->\r\n\t\t\t<form action=\"http://www.shelterlistings.org/city.php\">\r\n\t\t\t\t<h4>Locate
+        Maryland Listings By City: </h4>\r\n\t\t\t\tType city name below:<br />\r\n\t\t\t\t<input
+        name=\"city\" size=\"40\" type=\"text\"/>\r\n\t\t\t\t<input name=\"st\" type=\"hidden\"
+        value=\"MD\"/>\r\n\t\t\t\t<input name=\"submit\" value=\"Search for city\"
+        type=\"submit\" />\r\n\t\t\t</form>\r\n\t\t\t<!-- City search form end -->\r\n
+        \           \r\n            <br /><br />\r\n\r\nShelter Listings is dedicated
+        to serving the homeless and low-income. Choose the city in Maryland where
+        you want to find shelters, halfway houses, affordable housing, supportive
+        housing, low cost housing, etc. The database  consists of over 3,000 listings
+        and includes emergency shelters, homeless  shelters, day shelters, transitional
+        housing, residential drug/alcohol, rehabilitation programs and permanent affordable
+        housing.&nbsp; <br />\r\n\r\n<br /><br />\r\nChoose your city in Maryland
+        below:<br /><br />\r\n<table border=\"0\" width=\"100%\"  cellspacing=\"0\"
+        cellpadding=\"0\"><tr><td><a href=\"http://www.shelterlistings.org/city/aberdeen-md.html\"
+        >Aberdeen</a><br /><a href=\"http://www.shelterlistings.org/city/adelphi-md.html\"
+        >Adelphi</a><br /><a href=\"http://www.shelterlistings.org/city/annapolis-md.html\"
+        >Annapolis</a><br /><a href=\"http://www.shelterlistings.org/city/arbutus-md.html\"
+        >Arbutus</a><br /><a href=\"http://www.shelterlistings.org/city/arnold-md.html\"
+        >Arnold</a><br /><a href=\"http://www.shelterlistings.org/city/baltimore-md.html\"
+        >Baltimore</a><br /><a href=\"http://www.shelterlistings.org/city/bel_air-md.html\"
+        >Bel Air</a><br /><a href=\"http://www.shelterlistings.org/city/bethesda-md.html\"
+        >Bethesda</a><br /><a href=\"http://www.shelterlistings.org/city/brentwood-md.html\"
+        >Brentwood</a><br /><a href=\"http://www.shelterlistings.org/city/brooklyn_park-md.html\"
+        >Brooklyn Park</a><br /><a href=\"http://www.shelterlistings.org/city/california-md.html\"
+        >California</a><br /><a href=\"http://www.shelterlistings.org/city/callaway-md.html\"
+        >Callaway</a><br /><a href=\"http://www.shelterlistings.org/city/cambridge-md.html\"
+        >Cambridge</a><br /><a href=\"http://www.shelterlistings.org/city/capitol_heights-md.html\"
+        >Capitol Heights</a><br /><a href=\"http://www.shelterlistings.org/city/catonsville-md.html\"
+        >Catonsville</a><br /><a href=\"http://www.shelterlistings.org/city/centreville-md.html\"
+        >Centreville</a><br /><a href=\"http://www.shelterlistings.org/city/chevy_chase-md.html\"
+        >Chevy Chase</a><br /><a href=\"http://www.shelterlistings.org/city/college_park-md.html\"
+        >College Park</a><br /><a href=\"http://www.shelterlistings.org/city/columbia-md.html\"
+        >Columbia</a><br /><a href=\"http://www.shelterlistings.org/city/crisfield-md.html\"
+        >Crisfield</a><br /><a href=\"http://www.shelterlistings.org/city/crownsville-md.html\"
+        >Crownsville</a><br /><a href=\"http://www.shelterlistings.org/city/cumberland-md.html\"
+        >Cumberland</a><br /><a href=\"http://www.shelterlistings.org/city/dearborn_heights-md.html\"
+        >Dearborn Heights</a><br /><a href=\"http://www.shelterlistings.org/city/denton-md.html\"
+        >Denton</a><br /><a href=\"http://www.shelterlistings.org/city/earleville-md.html\"
+        >Earleville</a><br /><a href=\"http://www.shelterlistings.org/city/easton-md.html\"
+        >Easton</a><br /></td><td><a href=\"http://www.shelterlistings.org/city/elkton-md.html\"
+        >Elkton</a><br /><a href=\"http://www.shelterlistings.org/city/ellicott-md.html\"
+        >Ellicott</a><br /><a href=\"http://www.shelterlistings.org/city/fort_meade-md.html\"
+        >Fort Meade</a><br /><a href=\"http://www.shelterlistings.org/city/frederick-md.html\"
+        >Frederick</a><br /><a href=\"http://www.shelterlistings.org/city/fredrick-md.html\"
+        >Fredrick</a><br /><a href=\"http://www.shelterlistings.org/city/frostburg-md.html\"
+        >Frostburg</a><br /><a href=\"http://www.shelterlistings.org/city/ft_washington-md.html\"
+        >Ft Washington</a><br /><a href=\"http://www.shelterlistings.org/city/gaithersburg-md.html\"
+        >Gaithersburg</a><br /><a href=\"http://www.shelterlistings.org/city/glen_burnie-md.html\"
+        >Glen Burnie</a><br /><a href=\"http://www.shelterlistings.org/city/glenarden-md.html\"
+        >Glenarden</a><br /><a href=\"http://www.shelterlistings.org/city/greensboro-md.html\"
+        >Greensboro</a><br /><a href=\"http://www.shelterlistings.org/city/hagerstown-md.html\"
+        >Hagerstown</a><br /><a href=\"http://www.shelterlistings.org/city/hampstead-md.html\"
+        >Hampstead</a><br /><a href=\"http://www.shelterlistings.org/city/havre_de_grace-md.html\"
+        >Havre De Grace</a><br /><a href=\"http://www.shelterlistings.org/city/hughesville-md.html\"
+        >Hughesville</a><br /><a href=\"http://www.shelterlistings.org/city/hyattsville-md.html\"
+        >Hyattsville</a><br /><a href=\"http://www.shelterlistings.org/city/joppatowne-md.html\"
+        >Joppatowne</a><br /><a href=\"http://www.shelterlistings.org/city/kensington-md.html\"
+        >Kensington</a><br /><a href=\"http://www.shelterlistings.org/city/la_plata-md.html\"
+        >La Plata</a><br /><a href=\"http://www.shelterlistings.org/city/landover-md.html\"
+        >Landover</a><br /><a href=\"http://www.shelterlistings.org/city/lanham-md.html\"
+        >Lanham</a><br /><a href=\"http://www.shelterlistings.org/city/laplata-md.html\"
+        >Laplata</a><br /><a href=\"http://www.shelterlistings.org/city/laurel-md.html\"
+        >Laurel</a><br /><a href=\"http://www.shelterlistings.org/city/leonardtown-md.html\"
+        >Leonardtown</a><br /><a href=\"http://www.shelterlistings.org/city/lexington_park-md.html\"
+        >Lexington Park</a><br /></td><td><a href=\"http://www.shelterlistings.org/city/oakland-md.html\"
+        >Oakland</a><br /><a href=\"http://www.shelterlistings.org/city/ocean_city-md.html\"
+        >Ocean City</a><br /><a href=\"http://www.shelterlistings.org/city/oxon_hill-md.html\"
+        >Oxon Hill</a><br /><a href=\"http://www.shelterlistings.org/city/pikesville-md.html\"
+        >Pikesville</a><br /><a href=\"http://www.shelterlistings.org/city/pocomoke_city-md.html\"
+        >Pocomoke City</a><br /><a href=\"http://www.shelterlistings.org/city/port_tobacco-md.html\"
+        >Port Tobacco</a><br /><a href=\"http://www.shelterlistings.org/city/prince_frederick-md.html\"
+        >Prince Frederick</a><br /><a href=\"http://www.shelterlistings.org/city/quantico-md.html\"
+        >Quantico</a><br /><a href=\"http://www.shelterlistings.org/city/randallstown-md.html\"
+        >Randallstown</a><br /><a href=\"http://www.shelterlistings.org/city/reisterstown-md.html\"
+        >Reisterstown</a><br /><a href=\"http://www.shelterlistings.org/city/ridgely-md.html\"
+        >Ridgely</a><br /><a href=\"http://www.shelterlistings.org/city/riverdale-md.html\"
+        >Riverdale</a><br /><a href=\"http://www.shelterlistings.org/city/rockville-md.html\"
+        >Rockville</a><br /><a href=\"http://www.shelterlistings.org/city/rosedale-md.html\"
+        >Rosedale</a><br /><a href=\"http://www.shelterlistings.org/city/saint_michaels-md.html\"
+        >Saint Michaels</a><br /><a href=\"http://www.shelterlistings.org/city/salisbury-md.html\"
+        >Salisbury</a><br /><a href=\"http://www.shelterlistings.org/city/seat_pleasant-md.html\"
+        >Seat Pleasant</a><br /><a href=\"http://www.shelterlistings.org/city/silver_spring-md.html\"
+        >Silver Spring</a><br /><a href=\"http://www.shelterlistings.org/city/suitland-md.html\"
+        >Suitland</a><br /><a href=\"http://www.shelterlistings.org/city/takoma_park-md.html\"
+        >Takoma Park</a><br /><a href=\"http://www.shelterlistings.org/city/temple_hills-md.html\"
+        >Temple Hills</a><br /><a href=\"http://www.shelterlistings.org/city/tracys_lndg-md.html\"
+        >Tracys Lndg</a><br /><a href=\"http://www.shelterlistings.org/city/waldorf-md.html\"
+        >Waldorf</a><br /><a href=\"http://www.shelterlistings.org/city/westminster-md.html\"
+        >Westminster</a><br /><a href=\"http://www.shelterlistings.org/city/windsor_mill-md.html\"
+        >Windsor Mill</a><br /></td></tr></table>\r\n<br /><br />\r\n\r\n\r\n\r\n<h2>Types
+        of Shelters and Services we provide</h2>\r\n               <br />\r\n                  We
+        provide many categories of shelter for those in need and in need of services.
+        They include: \r\n\t\t<br /><br />\r\n               \r\n                <b>Day
+        Shelters</b> supplement homeless and low-income people when the shelter their
+        staying in only offers shelter on an overnight basis.  Case management is
+        often provided and sometimes there are laundry and  shower facilities.&nbsp;
+        Meals and basic hygiene may also be offered.&nbsp;  Almost all day shelters
+        provide their services free of charge. Any  emergency or homeless shelter
+        that allows clients to stay during the  day is also classified under this
+        category.\r\n                    <br /><br />            \r\n                 <b>Emergency
+        \ Homeless Shelters</b> both provide short term relief for the homeless &
+        low-income. Usually there is  a maximum stay of 3 months or less. Many of
+        these shelters ask their  clients to leave during the day.&nbsp; Meals and
+        other supportive services  are often offered.&nbsp; 3 times out of 5 these
+        shelters offer their  services free of charge.\r\n\t\t<br /><br />\r\n\t\t<b>Halfway
+        Housing</b> helps transition individuals and families from shelters or homelessness
+        \ to permanent housing. Length of stay is usually anywhere from 6 months  to
+        2 years.&nbsp; Residents are often required to pay at least 30% of their  income
+        toward program fees.&nbsp; Sometimes the money they pay in fees is  returned
+        to them when they leave. Any emergency or homeless shelter  that allows their
+        clients to stay more then 6 months is also classified  under this category.
+        \r\n                 <br /><br />\r\n                <b>Permanent Affordable
+        Housing</b> is a long-term solution for housing. Residents are often allowed
+        to stay as long as they remain in the low-income bracket but is sometimes
+        \ limited 3 - 5 years.&nbsp; Residents pay no more then 30% of their income
+        \ toward rent. Emergency shelters, homeless shelters and transitional  housing
+        programs that allow their clients to stay without a maximum  stay is also
+        classified under this category. \r\n                 <br /><br />\r\n                 <b>Drug
+        And Alcohol Rehab</b> programs are intended to treat alcohol and/or drug dependency.&nbsp;
+        The cost of  participating in one of these programs and the method of treatment
+        \ range significantly. The database operated on this website only  includes
+        residential rehab programs (not outpatient programs). We also provide Access
+        to Recovery (ATR) Grant programs for substance abuse treatment.&nbsp;</p>\r\n\t\t<br
+        /><br />\r\n                <b>Financial Help For the Needy</b> If you are
+        needy and looking for financial help, check out <a href=\"http://www.financialhelpresources.com\"
+        title=\"financial help\">FinancialHelpResources.com.</a>\r\n\t\t<br />\r\n
+        \               <br />\r\n\t\t<b>Supportive Housing</b> Programs that provide
+        an alternative living arrangement for individuals who, because of age, disability,
+        substance abuse, mental illness, chronic homelessness or other circumstances,
+        are unable to live independently without care, supervision and/or support
+        to help them in the activities of daily living; or who need access to case
+        management, housing support, vocational, employment and other services to
+        transition to independent living. \r\n\t\t<br />\r\n                <br />\r\n\t\t
+        <b>Shared Housing</b> Programs helps bring low income persons together and
+        helps prevent homelessness by providing affordable housing options. This service
+        is good for families, disabled persons, and others wanted more companionship.
+        ShelterListings.org finds these shared housing locations and lists them throughout
+        our website. \r\n\t\t<br /><br />\r\n\t\t <b>Rooming House or Boarding House</b>
+        A rooming house is a building in which renters occupy single rooms and share
+        kitchens, bathrooms, and common areas. \r\n\t\t\tThe location may be a converted
+        single family home, a converted hotel, or a purpose built structure. Rooming
+        houses may have as few as three rooms for rent, or more than a hundred. The
+        same goes for boarding houses. We list these types of residences throughout
+        ShelterListings.org. \r\n\t\t<br /><br />\r\n\r\n\t\t\r\n <b>Transitional
+        housing</b> is affordable supportive housing designed to provide housing and
+        appropriate support services to persons who are homeless \r\nor who are close
+        to homelessnessness. The transition is to help them be more self sufficience
+        to move toward independent living on their own. \r\nServices provided at transitional
+        housing facilities varies from substance abuse treatment, to psychological
+        assistanc, job \r\ntraining, domestic violence assistance, etc. The assistance
+        provided varies, but it is generally affordable and low cost housing. Read
+        the descriptions of each \r\nof the transitional living locations for more
+        detailed information. \r\n<br /><br />\r\n\r\n <script type=\"text/javascript\"><!--\r\ngoogle_ad_client
+        = \"pub-3544286905190479\";\r\n/* 336x280, created 8/17/11 */\r\ngoogle_ad_slot
+        = \"0227292876\";\r\ngoogle_ad_width = 336;\r\ngoogle_ad_height = 280;\r\n//-->\r\n</script>\r\n<script
+        type=\"text/javascript\"\r\nsrc=\"http://pagead2.googlesyndication.com/pagead/show_ads.js\">\r\n</script>\r\n<br
+        /><br />\t\r\n\r\n\r\n\r\n\r\n\r\n\t\t\t\t<div class=\"clear\"></div>\r\n\t\t\t\t<div
+        class=\"border\"></div>\r\n\r\n\t\t\t\t\r\n\t\t\t</div>\r\n\r\n\t\t\r\n\t\t</div><!--#content-->\r\n\r\n\r\n\t\t<!--
+        Sidebar -->\r\n\t\t<div id=\"sidebar\" class=\"grid4\">\r\n\t\t\r\n\t\r\n\r\n\t\t\t<div
+        class=\"pane\">\r\n\t\t\t\r\n\t\t\t\t\r\n\t\t\t\t<h3><b>Mission Statement</b></h3>\r\n\t\t\t\t\r\n\t\t\t\t\r\n\t\t\t\t<div
+        class=\"post\">\r\n\t\t\t\t\tTo help the needy find shelter and assistance.
+        This nation is going through tough times and providing a helping hand can
+        help make the world a better place.\r\n\t\t\t\t</div>\r\n\t\t\t\t\r\n\t\t\t\t\r\n\t\t\t\t\r\n\t\t\t</div>\r\n\t\t\t<br
+        /><br />\r\n\r\n\t\t\t<div class=\"pane\">\r\n\t\t\t\r\n\t\t\t\t\r\n\t\t\t\t<h3><b>Need
+        Help Paying Your Bills?</b></h3>\r\n\t\t\t\t\r\n\t\t\t\t\r\n\t\t\t\t<div class=\"post\">\r\n\t\t\t\tTry
+        our sister website<br />\r\n\t\t\t\t\t<a href=\"http://www.financialhelpresources.com/\"
+        target=\"_blank\">Financial Help Resources</a>\r\n\t\t\t\t</div>\r\n\t\t\t\t<br
+        />\r\n\r\n\t\t\t\t\t\t<script async src=\"//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js\"></script>\r\n<!--
+        rightnaveresponsive -->\r\n<ins class=\"adsbygoogle\"\r\n     style=\"display:block\"\r\n
+        \    data-ad-client=\"ca-pub-3544286905190479\"\r\n     data-ad-slot=\"2516362770\"\r\n
+        \    data-ad-format=\"auto\"></ins>\r\n<script>\r\n(adsbygoogle = window.adsbygoogle
+        || []).push({});\r\n</script>\r\n                 \r\n                \r\n\t\t\t\t\t\t\r\n\t\t\t\t\r\n\t\t\t</div>\r\n\r\n\r\n\r\n\r\n\t\t\t\r\n\t\t</div><!--sidebar-->\r\n\t\t\r\n\t\t<div
+        class=\"clear\"></div>\r\n\t</div><!--wrapper-->\r\n\r\n\r\n\t\r\n\t\r\n\t\r\n\t<div
+        id=\"footer\" class=\"container\">\r\n\t\t<div class=\"wrapper\">\r\n\t\t\r\n\t\t\t\r\n\t\t\t\r\n\t<script
+        type=\"text/javascript\">\r\n\r\n\t  var _gaq = _gaq || [];\r\n\t  _gaq.push(['_setAccount',
+        'UA-24843197-2']);\r\n\t  _gaq.push(['_trackPageview']);\r\n\r\n\t  (function()
+        {\r\n\t    var ga = document.createElement('script'); ga.type = 'text/javascript';
+        ga.async = true;\r\n\t    ga.src = ('https:' == document.location.protocol
+        ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';\r\n\t    var
+        s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga,
+        s);\r\n\t  })();\r\n\r\n\t</script>\r\n\r\n\t\t\t<!-- Footer Copyright -->\r\n\t\t\t<p
+        class=\"fr\">Copyright &copy; 2007 - 2017 <span>&middot;</span> ShelterListings.org
+        <span>&middot;</span> All Rights Reserved</p>\r\n\t\t\t<div class=\"clear\"></div>\r\n\t\t\r\n\t\t</div><!--wrapper-->\r\n\t</div><!--footer-->\r\n\r\n</body>\r\n</html>"
+    http_version: 
+  recorded_at: Sat, 20 May 2017 16:16:57 GMT
+recorded_with: VCR 3.0.3
