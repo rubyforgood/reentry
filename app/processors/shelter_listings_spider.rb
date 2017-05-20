@@ -8,7 +8,20 @@ class ShelterListingsSpider
 	link_tags = doc.css('.wrapper #content .post.page-content table a')
 	city_links = []
 	detail_urls = []
+	list_of_cities = extract_data(url: 'http://www.shelterlistings.org/state/maryland.html', css_selectors: '.wrapper #content .post.page-content table a')
+	
+	list_of_cities.each do |city_tag|
+		city_links << city_tag['href'] 
+	end
 
+	city_links.each do |link|
+		detail_urls << extract_data(url: link, css_selectors: 'table tr td a')[0]['href']
+	end
+
+	detail_urls
+
+	detail_urls = extract_data(url: 'http://www.shelterlistings.org/state/maryland.html', css_selectors: '.wrapper #content .post.page-content table a')
+	
 	link_tags.each do |tag|
 		city_links << tag['href'] 
 		# limit the number of calls made 
