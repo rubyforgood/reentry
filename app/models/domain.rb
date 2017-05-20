@@ -3,6 +3,9 @@ class Domain < ApplicationRecord
     'DOJProcessor' => DOJProcessor
   }
 
+  has_many :domain_services
+  has_many :services, through: :domain_services
+
   def perform_processor
     processor.perform(id)
   end
