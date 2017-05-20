@@ -12,9 +12,9 @@ class ComposerTest < ActiveSupport::TestCase
     it 'builds a Composer with sensible defaults for Location CSV processing' do
       default_composer = composer.build
 
-      assert_equal CSVParser,  default_composer.send(:parser)
-      assert_equal Normalizer, default_composer.send(:normalizer)
-      assert_equal Loader,     default_composer.send(:loader)
+      assert_equal CSVParser,      default_composer.send(:parser)
+      assert_equal Normalizer,     default_composer.send(:normalizer)
+      assert_equal LocationLoader, default_composer.send(:loader)
     end
   end
 
@@ -59,7 +59,7 @@ class ComposerTest < ActiveSupport::TestCase
       .with(parsed)
       .returns(normalized)
 
-    Loader
+    LocationLoader
       .expects(:load!)
       .with(normalized)
       .returns(result)

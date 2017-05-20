@@ -5,6 +5,7 @@ class PhoneNormalizer
 
   class << self
     def normalize(phone_data_string)
+      return [] if phone_data_string.blank?
       numbers_array = phone_data_string.split('/')
 
       numbers_array.map do |num|
