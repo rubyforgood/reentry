@@ -1,4 +1,3 @@
-
 class ShelterListingsProcessor < PerformSpider
 	def perform(domain_id)
 		domain = Domain.find(domain_id)
