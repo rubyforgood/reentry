@@ -4,7 +4,12 @@ require 'nokogiri'
 
 class ShelterListingsSpiderTest < ActiveSupport::TestCase
   myUrl = 'http://www.shelterlistings.org/details/38685/'
-  doc = Nokogiri::HTML(open(myUrl))
+  
+  def doc
+    @doc ||= VCR.use_cassette("shelter listings spider") do
+      Nokogiri::HTML(open(myUrl))
+    end
+  end
 
   test "Run extract_shelterlistings_address within shelter_listings_spider" do
     slist = ShelterListingsSpider.new
