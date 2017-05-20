@@ -1,6 +1,4 @@
 require 'test_helper'
-require 'open-uri'
-require 'nokogiri'
 
 class ShelterListingsSpiderTest < ActiveSupport::TestCase
   MyUrl = 'http://www.shelterlistings.org/details/38685/'
