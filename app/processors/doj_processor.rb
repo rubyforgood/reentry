@@ -5,7 +5,7 @@ class DOJProcessor
     fetcher = DOJFetcher
     parser = CSVParser
     normalizer = Normalizer
-    loader = Loader
+    loader = LocationLoader
 
     data = normalizer.normalize parser.parse fetcher.fetch domain
     loader.load! data, domain: domain

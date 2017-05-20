@@ -1,0 +1,33 @@
+* {
+  font-size: 18px;
+  line-height: 2;
+}
+body{
+  .smaller-text{
+    font-size: 14px;
+  }
+
+ .empty-space{
+    display: block;
+    height: 62px;
+  }
+
+ textarea{
+    width: 450px;
+  }
+
+ input[type=“text”]{
+    width: 450px;
+  }
+  .row{
+    margin: 0;
+  }
+  .content-wrapper{
+    padding: 0 20px 20px 20px;
+    //background: transparent;
+    > .row > div{
+      background: #fff;
+
+   }
+  }
+}

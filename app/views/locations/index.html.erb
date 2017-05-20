@@ -1,0 +1,35 @@
+<h3>Service Locations</h3>
+
+<table class='table table-striped'>
+  <thead>
+    <th>County</th>
+    <th>Name</th>
+    <th>Address</th>
+    <th>Phone Number</th>
+    <th>Website</th>
+    <th>Services</th>
+    <th>Type of Service</th>
+    <th>Last updated</th>
+    <th></th>
+  </thead>
+  <tbody>
+    <% @locations.each do |location| %>
+      <tr>
+        <td><%= location.county %></td>
+        <td><%= location.name %></td>
+        <td><%= location.address %></td>
+        <td><%= location.phone %></td>
+        <td><%= location.website %></td>
+        <td><%= location.services %></td>
+        <td><%= location.type_of_services %></td>
+        <td><%= location.updated_at %></td>
+        <td>
+          <%= link_to 'Edit', edit_location_path(location), class: 'btn btn-primary btn-xs' %>
+          <%= link_to 'Delete', location, method: :delete, data: { confirm: "Are you sure? "}, class: 'btn btn-danger btn-xs' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to "Add location", new_location_path, class: 'btn btn-primary btn-xs' %>
