@@ -2,7 +2,7 @@ class Loader
   Result = ImmutableStruct.new :success?, :error
   ERROR_MESSAGE = 'ERROR: Processor::Loader.load! transaction failed!'
 
-  def self.load!(data, klass: Location)
+  def self.load!(data, klass: Location, **kwargs)
     begin
       ActiveRecord::Base.transaction do
         data.each do |record|
@@ -14,6 +14,7 @@ class Loader
             website:          record[:website],
             services:         record[:services],
             type_of_services: record[:type],
+            **kwargs
           )
         end
       end

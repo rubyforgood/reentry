@@ -55,6 +55,8 @@ ActiveRecord::Schema.define(version: 20170520004548) do
     t.string "type_of_services"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "domain_id"
+    t.index ["domain_id"], name: "index_locations_on_domain_id"
   end
 
   create_table "services", force: :cascade do |t|
@@ -66,4 +68,5 @@ ActiveRecord::Schema.define(version: 20170520004548) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "locations", "domains"
 end

@@ -1,6 +1,7 @@
 require 'test_helper'
 
 class LoaderTest < ActiveSupport::TestCase
+  let(:domain) { Domain.create }
   let(:loader) { Loader }
 
   before(:each) do
@@ -10,13 +11,13 @@ class LoaderTest < ActiveSupport::TestCase
   describe '.load!' do
     describe 'successfully' do
       it 'creates ActiveRecord objects from the supplied array of data' do
-        loader.load!(parsed_array)
+        loader.load!(parsed_array, domain: domain)
 
         assert_equal 2, Location.count
       end
 
       it 'returns a successful Result object with no errors' do
-        result = loader.load!(parsed_array)
+        result = loader.load!(parsed_array, domain: domain)
 
         assert_instance_of Loader::Result, result
         assert_equal true, result.success?
@@ -26,7 +27,7 @@ class LoaderTest < ActiveSupport::TestCase
 
     describe 'unsuccessfully' do
       it 'does not create ActiveRecord objects from the supplied array of data' do
-        loader.load!([])
+        loader.load!([], domain: domain)
 
         assert_equal 0, Location.count
       end
