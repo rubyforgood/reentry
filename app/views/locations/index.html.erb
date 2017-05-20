@@ -1,0 +1,28 @@
+<h3>Service Locations</h3>
+
+<table class='table table-striped'>
+  <thead>
+    <th>County</th>
+    <th>Name</th>
+    <th>Address</th>
+    <th>Phone Number</th>
+    <th>Website</th>
+    <th>Services</th>
+    <th>Type of Service</th>
+    <th>Last updated</th>
+  </thead>
+  <tbody>
+    <% @locations.each do |location| %>
+      <tr>
+        <td><%= location.county %></td>
+        <td><%= location.name %></td>
+        <td><%= location.address %></td>
+        <td><%= location.phone %></td>
+        <td><%= location.website %></td>
+        <td><%= location.services %></td>
+        <td><%= location.type_of_services %></td>
+        <td><%= location.updated_at %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
