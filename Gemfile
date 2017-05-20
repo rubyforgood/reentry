@@ -16,6 +16,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'immutable-struct'
 gem 'nokogiri'
 gem 'geocoder'
+gem 'bootstrap-sass', '3.3.7'
 
 group :development, :test do
   gem 'pry'
