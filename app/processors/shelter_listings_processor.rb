@@ -1,7 +1,7 @@
 
 class ShelterListingsProcessor < PerformSpider
 	def perform(domain_id)
-		domain = Domain.find(domain_id)
+		domain = Domain.find(1)
 		url = domain.url
 		run_shelter_listings_spider(domain_url: url)
 	end
