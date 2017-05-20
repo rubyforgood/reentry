@@ -12,6 +12,9 @@
     <% flash.each do |key, value| %>
         <div class="alert alert-<%= key %>"><%= value %></div>
     <% end %>
+
+    <%= render 'layouts/nav_bar' %>
+
     <div class="container">
       <%= yield %>
     </div>
