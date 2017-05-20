@@ -1,0 +1,4 @@
+
+class ShelterListingsProcessor < PerformSpider
+
+end
