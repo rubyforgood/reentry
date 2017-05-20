@@ -6,7 +6,14 @@ describe PhoneNormalizer do
   describe '.normalize' do
     describe 'with a string containing two numbers' do
       it 'returns a string in the XXX-XXX-XXXX format' do
-        #### WIP
+        numbers = '(410) 837-^M1800 ext.^M240 / (410)^M887-0295'
+        result = normalizer.normalize numbers
+        number_1 = result.first
+        number_2 = result.last
+
+        assert_equal 2, result.length
+        assert_equal '410-837-1800 ext: 240', number_1.number
+        assert_equal '410-887-0295', number_2.number
       end
     end
 
