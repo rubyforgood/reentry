@@ -25,6 +25,14 @@ ActiveRecord::Schema.define(version: 20170520182502) do
     t.index ["link_id"], name: "index_documents_on_link_id"
   end
 
+  create_table "domain_services", force: :cascade do |t|
+    t.string "domain_id"
+    t.string "service_id"
+    t.boolean "active", default: true, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "domains", force: :cascade do |t|
     t.string "name"
     t.string "kind"
@@ -41,6 +49,14 @@ ActiveRecord::Schema.define(version: 20170520182502) do
   create_table "links", force: :cascade do |t|
     t.string "url"
     t.datetime "retrieved_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "location_services", force: :cascade do |t|
+    t.string "location_id"
+    t.string "service_id"
+    t.boolean "active", default: true, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
