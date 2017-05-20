@@ -13,6 +13,8 @@ class LocationLoader
             website:          record[:website],
             services:         record[:services],
             type_of_services: record[:type],
+            latitude:         record[:latitude],
+            longitude:        record[:longitude],
             **kwargs
           )
 

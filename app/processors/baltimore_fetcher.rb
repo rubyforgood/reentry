@@ -17,6 +17,9 @@ class BaltimoreFetcher
         memo[keymap[key]] = entry[key]
       end
       record[:address] = "#{entry["location_1_address"]}, #{entry["location_1_city"]}, #{entry["location_1_state"]}"
+      record[:phone] = [record[:phone]]
+      record[:longitude] = entry["location_1"]["coordinates"].first.to_s
+      record[:latitude] = entry["location_1"]["coordinates"].last.to_s
       record
     end
   end

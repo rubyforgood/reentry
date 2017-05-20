@@ -1,6 +1,6 @@
 class BaltimoreProcessor
   def perform(domain_id)
-    loader = Loader
+    loader = LocationLoader
     domain = Domain.find(domain_id)
     fetcher = BaltimoreFetcher.new(domain)
     fetcher.fetch

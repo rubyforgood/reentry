@@ -24,4 +24,16 @@ class BaltimoreFetcherTest < ActiveSupport::TestCase
     assert addresses.any?, "Addresses are missing"
     assert addresses.include?("725 Fallsway, Baltimore, MD"), "Addresses are in the wrong format"
   end
+
+  it 'returns phone numbers as a list' do
+    phone_numbers = fetcher.records.map {|record| record[:phone]}
+    assert phone_numbers.any?, "Phone numbers are missing"
+    assert phone_numbers.include?(["410-625-0775"])
+  end
+
+  it 'populates latitude and longitude' do
+    test_location = fetcher.records.select {|record| record[:name] == "Total Health Care"}.first
+    assert_equal "-76.641489", test_location[:longitude]
+    assert_equal "39.31007", test_location[:latitude]
+  end
 end
