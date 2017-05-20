@@ -38,10 +38,10 @@ class ShelterListingsProcessor < PerformSpider
 
 	def extract_data_from_details_page(details_url: raise)
 		final_data = {}
-
 		html_doc = get_website_html(url: details_url)
+		
 		final_data[:name] = extract_data(html: html_doc, css_selectors: '.post.page-content h2').children.first.text
-		final_data[:address] = extract_data(html: html_doc, css_selectors: '.post.page-content br')[4].next.text.strip
+		final_data[:address] = extract_shelterlistings_address(doc_html: html_doc)
 		if extract_data(html: html_doc, css_selectors: '.post.page-content br').try(:next)
 			final_data[:phone] = extract_data(html: html_doc, css_selectors: '.post.page-content br').next.text.strip
 		end
@@ -58,5 +58,12 @@ class ShelterListingsProcessor < PerformSpider
 		rescue => e
 			Rails.logger.error "Error occured at #{_method_}: #{e}"
 		end
+	end
+
+	def extract_shelterlistings_address(doc_html: raise)
+		google_map_js = doc_html.css("script")[9].text
+		lat, lng = google_map_js.scan(/-?\d+\.\d+/); 
+		geo_localization = "#{lat},#{lng}"
+		query = Geocoder.search(geo_localization).first
 	end
 end
