@@ -11,7 +11,7 @@ class DomainsController < ApplicationController
   def create
     @domain = Domain.new(domain_params)
     if @domain.save
-      redirect_to new_domain_path
+      redirect_to domains_path
       flash[:success] = "Domain saved"
     else
       render action: 'new'
@@ -36,6 +36,13 @@ class DomainsController < ApplicationController
       render action: 'edit'
       flash[:danger] = "Unable to update domain"
     end
+  end
+
+  def destroy
+    @domain = Domain.find(params[:id])
+    @domain.destroy
+    redirect_to domains_path
+    flash[:success] = "Domain destroyed"
   end
 
   private
