@@ -14,12 +14,9 @@ gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'immutable-struct'
-<<<<<<< HEAD
 gem 'nokogiri'
 gem 'geocoder'
-=======
 gem 'bootstrap-sass', '3.3.7'
->>>>>>> adds index action
 
 group :development, :test do
   gem 'pry'
