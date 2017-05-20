@@ -1,0 +1,11 @@
+<h3><%= @domain.name %></h3>
+
+<strong>Kind:</strong> <%= @domain.kind %><br />
+<strong>Url:</strong> <%= @domain.description %><br />
+<strong>Search Depth:</strong> <%= @domain.search_depth %><br />
+<strong>Status:</strong> <%= @domain.status %><br />
+<strong>Status Date:</strong> <%= @domain.status_date %><br />
+<strong>Last Searched At:</strong> <%= @domain.searched_at %><br />
+<strong>Last Upated At:</strong> <%= @domain.updated_at %><br />
+<%= link_to 'Edit', edit_domain_path(@domain), class: 'btn btn-warning btn-xs' %>
+<%= link_to 'Delete', @domain, method: :delete, data: { confirm: "Are you sure you want to delete? "}, class: 'btn btn-danger btn-xs' %>
