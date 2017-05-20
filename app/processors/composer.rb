@@ -3,7 +3,7 @@ class Composer
     new(
       parser:     CSVParser,
       normalizer: Normalizer,
-      loader:     Loader
+      loader:     LocationLoader
     )
   end
 

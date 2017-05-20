@@ -61,6 +61,15 @@ ActiveRecord::Schema.define(version: 20170520182502) do
     t.index ["domain_id"], name: "index_locations_on_domain_id"
   end
 
+  create_table "phone_numbers", force: :cascade do |t|
+    t.string "number"
+    t.string "kind"
+    t.string "description"
+    t.integer "location_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "services", force: :cascade do |t|
     t.string "name"
     t.string "taxonomy_id"
