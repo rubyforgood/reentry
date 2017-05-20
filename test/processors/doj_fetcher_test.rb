@@ -11,6 +11,8 @@ class DOJFetcherTest < ActiveSupport::TestCase
 
   describe '.fetch' do
     it 'retrieves data from the DOJ PDF URL' do
+      skip('this test is slower') if ENV['TEST_FASTER']
+
       csv_file = Rails.root + 'test/fixtures/files/doj-data.csv'
       expected = File.read(csv_file)
 

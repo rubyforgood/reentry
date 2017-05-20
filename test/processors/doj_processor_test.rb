@@ -10,6 +10,8 @@ class DOJProcessorTest < ActiveSupport::TestCase
 
   describe '#perform' do
     it 'transforms and loads data from the DOJ PDF URL' do
+      skip('This test is slower') if ENV['TEST_FASTER']
+
       VCR.use_cassette('doj_pdf_fetcher') do
         domain.perform_processor
       end
