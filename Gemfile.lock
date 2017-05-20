@@ -67,6 +67,7 @@ GEM
     erubi (1.6.0)
     execjs (2.7.0)
     ffi (1.9.18)
+    geocoder (1.4.4)
     globalid (0.4.0)
       activesupport (>= 4.2.0)
     hashdiff (0.3.4)
@@ -200,6 +201,7 @@ DEPENDENCIES
   byebug
   capybara (~> 2.13)
   coffee-rails (~> 4.2)
+  geocoder
   immutable-struct
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
@@ -207,6 +209,7 @@ DEPENDENCIES
   minitest-rails
   minitest-spec-rails
   mocha
+  nokogiri
   pg
   pry
   puma (~> 3.7)
