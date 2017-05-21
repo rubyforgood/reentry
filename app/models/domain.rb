@@ -1,7 +1,8 @@
 class Domain < ApplicationRecord
   PROCESSORS = {
+    'BaltimoreProcessor' => BaltimoreProcessor,
     'DOJProcessor' => DOJProcessor,
-    'BaltimoreProcessor' => BaltimoreProcessor
+    'ShelterListingsProcessor' => ShelterListingsProcessor
   }
 
   has_many :domain_services
