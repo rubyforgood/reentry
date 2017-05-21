@@ -2,7 +2,10 @@ class ShelterListingsProcessor < PerformSpider
 	def perform(domain_id)
 		domain = Domain.find(domain_id)
 		url = domain.url
-		run_shelter_listings_spider(domain_url: url)
+		data = run_shelter_listings_spider(domain_url: url)
+    data.each do |item|
+      Location.find_or_create_by(**item)
+    end
 	end
 
 	def run_shelter_listings_spider(domain_url: raise)
