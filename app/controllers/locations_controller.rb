@@ -14,10 +14,11 @@ class LocationsController < ApplicationController
   def create
     @location = Location.new(location_params)
     if @location.save
+      redirect_to locations_path
       flash[:success] = "Location added!"
-      redirect_to action: 'index'
     else
-      render 'new'
+      redirect_to new_location_path
+      flash[:danger] = "Could not save location."
     end
   end
 
@@ -29,10 +30,11 @@ class LocationsController < ApplicationController
     @location = Location.find(params[:id])
 
     if @location.update_attributes(location_params)
+      redirect_to locations_path
       flash[:success] = "Location updated"
-      redirect_to action: 'index'
     else
-      render action: 'edit'
+      redirect_to edit_location_path
+      flash[:danger] = "Location not updated"
     end
   end
 
