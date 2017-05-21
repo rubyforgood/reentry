@@ -6,4 +6,7 @@ Rails.application.routes.draw do
   get 'perform_processor', to: 'domains#perform_processor'
 
   resources :locations
+  resources :location_services, only: [:index]
+
+  resources :downloads
 end

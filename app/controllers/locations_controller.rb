@@ -1,6 +1,12 @@
 class LocationsController < ApplicationController
   def index
+
     @locations = Location.all
+
+    respond_to do |format|
+       format.csv { render :csv => Location.all, :style => :ohana, :filename => 'locations' }
+       format.html
+     end
   end
 
   def show

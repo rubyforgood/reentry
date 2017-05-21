@@ -1,0 +1,28 @@
+<h3>CSV Dowloads</h3>
+
+<table class='table table-striped'>
+  <thead>
+    <th>Model</th>
+    <th>Filename</th>
+    <th>Records</th>
+    <th></th>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Locations</td>
+      <td>locations.csv</td>
+      <td><%= Location.count %></td>
+      <td>
+        <%= link_to 'Download', locations_path(format: 'csv'), class: 'btn btn-primary btn-xs' %>
+      </td>
+    </tr>
+    <tr>
+      <td>Services</td>
+      <td>services.csv</td>
+      <td><%= Service.count %></td>
+      <td>
+        <%= link_to 'Download', location_services_path(format: 'csv'), class: 'btn btn-primary btn-xs' %>
+      </td>
+    </tr>
+  </tbody>
+</table>
