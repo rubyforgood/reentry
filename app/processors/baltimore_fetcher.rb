@@ -20,6 +20,8 @@ class BaltimoreFetcher
       record[:phone] = [record[:phone]]
       record[:longitude] = entry["location_1"]["coordinates"].first.to_s
       record[:latitude] = entry["location_1"]["coordinates"].last.to_s
+      record[:service_description] = entry['type']
+      record[:services] = ServiceNormalizer.normalize(entry['type'])
       record
     end
   end
