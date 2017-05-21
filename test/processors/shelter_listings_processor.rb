@@ -44,7 +44,16 @@ class ShelterListingsProcessorTest < ActiveSupport::TestCase
           assert_equal data_hash[:latitude].round, expected_lat
           assert_equal data_hash[:longitude].round, expected_lng
         end
-      
+      end
+
+      it '.extract_shelterlistings_address address is not empty and lag lng is a decimal' do
+        VCR.use_cassette("shelter listings spider") do
+          data_hash = ShelterListingsProcessor.new.extract_data_from_details_page(details_url: details_page_url)
+          assert data_hash.is_a? Hash
+          assert !data_hash[:address].nil? && !data_hash[:address].empty?
+          assert_not_equal data_hash[:latitude] % 1, 0      #check to make sure it is decimal
+          assert_not_equal data_hash[:longitude] % 1,  0
+        end
       end
     end
 
