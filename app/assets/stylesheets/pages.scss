@@ -1,3 +1,12 @@
 // Place all the styles related to the Pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+p {
+  padding-top: 20px;
+  text-indent: 40px;
+}
+
+.img-border {
+  max-width: 100%;
+  border: 1px solid black;
+}

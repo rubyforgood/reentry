@@ -20,3 +20,10 @@ csv.each do |row|
   puts "#{t.taxonomy_id} #{t.name} saved"
 end
 puts "There are now #{Service.count} rows in the taxonomies table"
+
+domains = YAML.load_file(Rails.root.join('lib', 'seeds', 'domains.yml'))
+domains.each do |domain|
+  Domain.create(**domain)
+  puts "Added domain: #{domain}"
+end
+puts "There are now #{Domain.count} rows in the domains table"

@@ -1,0 +1,13 @@
+---
+
+- :name: DOJ PDF
+  :kind: DOJProcessor
+  :url: https://www.justice.gov/usao-md/page/file/941351/download
+
+- :name: Open Baltimore
+  :kind: BaltimoreProcessor
+  :url: https://data.baltimorecity.gov/resource/4adc-a5y9.json
+
+- :name: Shelter Listings
+  :kind: ShelterListingsProcessor
+  :url: http://www.shelterlistings.org/state/maryland.html
