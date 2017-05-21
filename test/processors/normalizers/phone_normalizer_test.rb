@@ -4,9 +4,22 @@ describe PhoneNormalizer do
   let(:normalizer) { PhoneNormalizer }
 
   describe '.normalize' do
-    describe 'with a string containing two phone numbers' do
+    describe "with a string containing two phone numbers split by a '/'" do
       it 'returns an array containing both PhoneNumbers' do
-        numbers = '(410) 837-^M1800 ext.^M240 / (410)^M887-0295'
+        numbers = '(222) 837-^M1800 ext.^M240 / (410)^M887-0295'
+        result = normalizer.normalize numbers
+        number_1 = result.first
+        number_2 = result.last
+
+        assert_equal 2, result.length
+        assert_equal '222-837-1800 ext: 240', number_1
+        assert_equal '410-887-0295', number_2
+      end
+    end
+
+    describe "with a string containing two phone numbers split by a ';'" do
+      it 'returns an array containing both PhoneNumbers' do
+        numbers = '(410) 837-^M1800 ext.^M240 ; (410)^M887-0295'
         result = normalizer.normalize numbers
         number_1 = result.first
         number_2 = result.last
@@ -39,13 +52,24 @@ describe PhoneNormalizer do
           assert_equal '1-234-567-8910', phone_number
         end
       end
+
+      describe 'and an alphanumeric phone number' do
+        it 'returns an array containing the alphanumeric PhoneNumber' do
+          number       = '(202) 810-HOPE (4673)'
+          result       = normalizer.normalize number
+          phone_number = result.first
+
+          assert_instance_of Array, result
+          assert_equal '202-810-HOPE (4673)', phone_number
+        end
+      end
     end
 
     describe 'with an extension' do
       it 'returns an array containing the normalized PhoneNumber with an extension' do
-        number_1            = '234.567.8910 x91233'
-        number_2            = '(234)567-8910 x91233'
-        number_3            = '1-[234]-567-8910 x91233'
+        number_1            = '234.567.8910 ext 91233'
+        number_2            = '(234)567-8910 ext 91233'
+        number_3            = '1-[234]-567-8910 ext. 91233'
 
         normalized_number_1 = normalizer.normalize(number_1).first
         normalized_number_2 = normalizer.normalize(number_2).first
