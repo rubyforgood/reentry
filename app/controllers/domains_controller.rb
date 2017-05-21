@@ -47,8 +47,14 @@ class DomainsController < ApplicationController
 
   def perform_processor
     domain = Domain.find(params[:id])
+    locations = Location.where(domain: domain)
+    original_count = locations.count
     domain.perform_processor
+    updated_count = locations.count
     redirect_to domain_path domain
+    flash[:success] = <<~FLASH
+      Search complete. Number of locations from this domain was #{original_count}, now #{updated_count}
+    FLASH
   end
 
   private
