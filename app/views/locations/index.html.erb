@@ -2,29 +2,32 @@
 
 <table class='table table-striped'>
   <thead>
-    <th>County</th>
     <th>Name</th>
+    <th>County</th>
     <th>Address</th>
     <th>Phone Number</th>
     <th>Website</th>
     <th>Services</th>
     <th>Type of Service</th>
     <th>Last updated</th>
-    <th></th>
+    <th>Longitude</th>
+    <th>Latitude</th>
   </thead>
   <tbody>
     <% @locations.each do |location| %>
       <tr>
-        <td><%= location.county %></td>
         <td><%= location.name %></td>
+        <td><%= location.county %></td>
         <td><%= location.address %></td>
         <td><%= location.phone %></td>
         <td><%= location.website %></td>
         <td><%= location.services %></td>
         <td><%= location.type_of_services %></td>
-        <td><%= location.updated_at %></td>
+        <td><%= location.updated_at.to_date %></td>
+        <td><%= location.longitude %></td>
+        <td><%= location.latitude %></td>
         <td>
-          <%= link_to 'Edit', edit_location_path(location), class: 'btn btn-primary btn-xs' %>
+          <%= link_to 'Edit', edit_location_path(location), class: 'btn btn-warning btn-xs' %>
           <%= link_to 'Delete', location, method: :delete, data: { confirm: "Are you sure? "}, class: 'btn btn-danger btn-xs' %>
         </td>
       </tr>
