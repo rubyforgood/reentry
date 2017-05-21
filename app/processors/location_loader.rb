@@ -32,6 +32,9 @@ class LocationLoader
               location_id: location.id
             )
           end
+          unless record[:address].nil?
+            
+          end
         end
       end
     rescue ActiveRecord::RecordInvalid
