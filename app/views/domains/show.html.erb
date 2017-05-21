@@ -9,3 +9,8 @@
 <strong>Last Upated At:</strong> <%= @domain.updated_at %><br />
 <%= link_to 'Edit', edit_domain_path(@domain), class: 'btn btn-warning btn-xs' %>
 <%= link_to 'Delete', @domain, method: :delete, data: { confirm: "Are you sure you want to delete? "}, class: 'btn btn-danger btn-xs' %>
+
+<%= link_to "Run Search",
+            perform_processor_path(id: @domain.id),
+            data: { confirm: "Are you sure you want to run this search? "},
+            class: 'btn btn-default btn-xs btn-info' %>

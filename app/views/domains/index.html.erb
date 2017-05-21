@@ -25,9 +25,20 @@
           <td><%= domain.status %></td>
           <td><%= domain.status_date %></td>
           <td><%= domain.searched_at %></td>
-          <td><%= link_to 'Edit', edit_domain_path(domain), class: 'btn btn-warning btn-xs' %>
-          <%= link_to 'Delete', domain, method: :delete, data: { confirm: "Are you sure you want to delete? "}, class: 'btn btn-danger btn-xs' %>
-        </td>
+          <td>
+            <%= link_to 'Edit', edit_domain_path(domain), class: 'btn btn-warning btn-xs' %>
+
+            <%= link_to 'Delete',
+                        domain,
+                        method: :delete,
+                        data: { confirm: "Are you sure you want to delete? "},
+                        class: 'btn btn-danger btn-xs' %>
+
+            <%= link_to "Run Search",
+                        perform_processor_path(id: domain.id),
+                        data: { confirm: "Are you sure you want to run this search? "},
+                        class: 'btn btn-default btn-xs btn-info' %>
+          <td>
         </tr>
       <% end %>
     </tbody>
