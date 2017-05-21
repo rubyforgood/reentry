@@ -56,13 +56,13 @@ class ShelterListingsProcessor < PerformSpider
 		final_data
 	end
 
-   def extract_shelterlistings_address(doc_html)
-        google_map_js = extract_data(html: doc_html, css_selectors: 'script')[9].text
-        lat, lng = google_map_js.scan(/-?\d+\.\d+/); 
-        geo_localization = "#{lat},#{lng}"
-        query = Geocoder.search(geo_localization).first
-        output = { 'address' => query.data["formatted_address"],
-        'lat' => query.data["geometry"]["location"]["lat"],
-        'lng' => query.data["geometry"]["location"]["lng"]  }
-    end
+	def extract_shelterlistings_address(doc_html)
+	    google_map_js = extract_data(html: doc_html, css_selectors: 'script')[9].text
+	    lat, lng = google_map_js.scan(/-?\d+\.\d+/); 
+	    geo_localization = "#{lat},#{lng}"
+	    query = Geocoder.search(geo_localization).first
+	    output = { 'address' => query.data["formatted_address"],
+	    'lat' => query.data["geometry"]["location"]["lat"],
+	    'lng' => query.data["geometry"]["location"]["lng"]  }
+	end
 end

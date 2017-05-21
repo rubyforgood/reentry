@@ -33,9 +33,19 @@ class ShelterListingsProcessorTest < ActiveSupport::TestCase
       end
 
       it '.extract_shelterlistings_address returns an address hash' do
-        # Ken will fill it :)
-      end
+        expected_addr = "53 E Bel Air Ave, Aberdeen, MD 21001, USA"
+        expected_lat = 40
+        expected_lng = -76
 
+        VCR.use_cassette("shelter listings spider") do
+          data_hash = ShelterListingsProcessor.new.extract_data_from_details_page(details_url: details_page_url)
+          assert data_hash.is_a? Hash
+          assert_equal data_hash[:address], expected_addr
+          assert_equal data_hash[:latitude].round, expected_lat
+          assert_equal data_hash[:longitude].round, expected_lng
+        end
+      
+      end
     end
 
   end
