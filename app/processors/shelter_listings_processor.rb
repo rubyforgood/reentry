@@ -61,8 +61,18 @@ class ShelterListingsProcessor < PerformSpider
 	    lat, lng = google_map_js.scan(/-?\d+\.\d+/); 
 	    geo_localization = "#{lat},#{lng}"
 	    query = Geocoder.search(geo_localization).first
-	    output = { 'address' => query.data["formatted_address"],
-	    'lat' => query.data["geometry"]["location"]["lat"],
-	    'lng' => query.data["geometry"]["location"]["lng"]  }
+	    address1,city,state_zip,country = query.data["formatted_address"].split(',')
+	    state,zip = state_zip.split(' ')
+	    output = { 
+		    'address' => query.data["formatted_address"],
+	      'address1' => address1,
+	      'address2' => nil,
+		    'city' => city,
+		    'state' => state,
+		    'zip' => zip,
+		    'country' => country,
+		    'lat' => query.data["geometry"]["location"]["lat"],
+		    'lng' => query.data["geometry"]["location"]["lng"]  
+	    }
 	end
 end
