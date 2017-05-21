@@ -48,8 +48,9 @@ class LocationLoaderTest < ActiveSupport::TestCase
         :address          => 'Various locations',
         :phone            => ['222-333-4444', '1-888-234-1122'],
         :website          => 'www.westernmarylandaa.org',
-        :services         => 'Support services',
-        :type_of_services => 'Substance Abuse',
+        :services         => [],
+        :service_description => 'Support services',
+        :type_of_services => 'Substance Abuse'
       },
       {
         :county           => 'Anne Arundel',
@@ -57,8 +58,9 @@ class LocationLoaderTest < ActiveSupport::TestCase
         :address          => '10 Hudson Street Annapolis, MD 21401',
         :phone            => ['(410) 349-5056'],
         :website          => 'www.annapolislighthouse.org',
-        :services         => 'Emergency shelter',
-        :type_of_services => 'Shelter',
+        :services         => [],
+        :service_description => 'Emergency shelter',
+        :type_of_services => 'Shelter'
       }
     ]
   end

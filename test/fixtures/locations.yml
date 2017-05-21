@@ -6,7 +6,7 @@ one:
   address: MyString
   phone: MyString
   website: MyString
-  services: MyString
+  service_description: MyString
   type_of_services: MyString
 
 two:
@@ -15,5 +15,5 @@ two:
   address: MyString
   phone: MyString
   website: MyString
-  services: MyString
+  service_description: MyString
   type_of_services: MyString
