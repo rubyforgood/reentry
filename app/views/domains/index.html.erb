@@ -27,7 +27,8 @@
           <td><%= domain.searched_at %></td>
           <td><%= link_to 'Edit', edit_domain_path(domain), class: 'btn btn-warning btn-xs' %>
           <%= link_to 'Delete', domain, method: :delete, data: { confirm: "Are you sure you want to delete? "}, class: 'btn btn-danger btn-xs' %>
-        </td>
+          </td>
+          <td><%= link_to "Run #{domain.name} Process", perform_processor_path(id: domain.id), data: { confirm: "Are you sure you want to run this process? "}, class: 'btn btn-default btn-xs' %><td>
         </tr>
       <% end %>
     </tbody>

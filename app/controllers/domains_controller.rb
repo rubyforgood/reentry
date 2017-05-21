@@ -45,6 +45,13 @@ class DomainsController < ApplicationController
     flash[:success] = "Domain destroyed"
   end
 
+  def perform_processor
+    domain = Domain.find(params[:id])
+    # STOPING THE PROCESS HERE
+    raise domain.inspect
+    redirect_to domain_path
+  end
+
   private
 
   def domain_params
