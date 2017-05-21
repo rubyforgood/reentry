@@ -14,7 +14,7 @@ class DomainsController < ApplicationController
       redirect_to domains_path
       flash[:success] = "Domain saved"
     else
-      render action: 'new'
+      redirect_to new_domain_path
       flash[:danger] = "Domain not saved"
     end
   end
@@ -33,7 +33,7 @@ class DomainsController < ApplicationController
       redirect_to domain_path
       flash[:success] = "Domain updated"
     else
-      render action: 'edit'
+      redirect_to edit_domain_path
       flash[:danger] = "Unable to update domain"
     end
   end
