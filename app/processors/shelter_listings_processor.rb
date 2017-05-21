@@ -49,7 +49,12 @@ class ShelterListingsProcessor < PerformSpider
 			final_data[:phone] = extract_data(html: html_doc, css_selectors: '.post.page-content br').next.text.strip
 		end
 		final_data[:website] = details_url
-		final_data[:county] = 'USA'
+		final_data[:address1] = address_hash['address1']
+		final_data[:address2] = address_hash['address2']
+		final_data[:city] = address_hash['city']
+		final_data[:state] = address_hash['state']
+		final_data[:zip] = address_hash['zip']
+		final_data[:country] = address_hash['country']
 		final_data[:type_of_services] = 'Housing'	
 		final_data[:latitude] = address_hash['lat']
 		final_data[:longitude] = address_hash['lng']
@@ -65,14 +70,14 @@ class ShelterListingsProcessor < PerformSpider
 	    state,zip = state_zip.split(' ')
 	    output = { 
 		    'address' => query.data["formatted_address"],
-	      'address1' => address1,
+	      'address1' => address1.strip,
 	      'address2' => nil,
-		    'city' => city,
-		    'state' => state,
+		    'city' => city.strip,
+		    'state' => state.strip,
 		    'zip' => zip,
-		    'country' => country,
+		    'country' => country.strip,
 		    'lat' => query.data["geometry"]["location"]["lat"],
-		    'lng' => query.data["geometry"]["location"]["lng"]  
+		    'lng' => query.data["geometry"]["location"]["lng"]
 	    }
 	end
 end

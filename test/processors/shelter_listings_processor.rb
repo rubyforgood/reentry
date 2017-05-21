@@ -55,6 +55,26 @@ class ShelterListingsProcessorTest < ActiveSupport::TestCase
           assert_not_equal data_hash[:longitude] % 1,  0
         end
       end
+
+      it '.extract_shelterlistings_address returns full address breakdown hash' do
+        expected_addr1 = "53 E Bel Air Ave"
+        expected_addr2 = nil
+        expected_city = "Aberdeen"
+        expected_state = "MD"
+        expected_zip = "21001"
+        expected_country = "USA"
+
+        VCR.use_cassette("shelter listings spider") do
+          data_hash = ShelterListingsProcessor.new.extract_data_from_details_page(details_url: details_page_url)
+          assert_equal expected_addr1, data_hash[:address1]
+          assert_equal expected_addr2, data_hash[:address2]
+          assert_equal expected_city, data_hash[:city]
+          assert_equal expected_state, data_hash[:state]
+          assert_equal expected_zip, data_hash[:zip]
+          assert_equal expected_country, data_hash[:country] 
+        end
+      end
+
     end
 
   end
