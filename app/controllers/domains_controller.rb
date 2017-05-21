@@ -47,9 +47,8 @@ class DomainsController < ApplicationController
 
   def perform_processor
     domain = Domain.find(params[:id])
-    # STOPING THE PROCESS HERE
-    raise domain.inspect
-    redirect_to domain_path
+    domain.perform_processor
+    redirect_to domain_path domain
   end
 
   private
