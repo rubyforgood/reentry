@@ -15,7 +15,7 @@ describe AddressesController do
 
   it "creates address" do
     expect {
-      post addresses_url, params: { address: { address_1: address.address_1, address_2: address.address_2, city: address.city, country: address.country, loction_id: address.loction_id, postal_code: address.postal_code, state_province: address.state_province } }
+      post addresses_url, params: { address: { address_1: address.address_1, address_2: address.address_2, city: address.city, country: address.country, location_id: address.location_id, postal_code: address.postal_code, state_province: address.state_province } }
     }.must_change "Address.count"
 
     must_redirect_to address_path(Address.last)
@@ -32,7 +32,7 @@ describe AddressesController do
   end
 
   it "updates address" do
-    patch address_url(address), params: { address: { address_1: address.address_1, address_2: address.address_2, city: address.city, country: address.country, loction_id: address.loction_id, postal_code: address.postal_code, state_province: address.state_province } }
+    patch address_url(address), params: { address: { address_1: address.address_1, address_2: address.address_2, city: address.city, country: address.country, location_id: address.loction_id, postal_code: address.postal_code, state_province: address.state_province } }
     must_redirect_to address_path(address)
   end
 
