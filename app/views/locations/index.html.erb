@@ -20,7 +20,7 @@
         <td><%= location.county %></td>
         <td><%= location.address %></td>
         <td><%= location.phone %></td>
-        <td><%= location.website %></td>
+        <td><%=link_to location.website,location.website %></td>
         <td><%= location.service_description %></td>
         <td><%= location.type_of_services %></td>
         <td><%= location.updated_at.to_date %></td>
