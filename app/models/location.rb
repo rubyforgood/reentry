@@ -3,4 +3,5 @@ class Location < ApplicationRecord
   has_many :phone_numbers
   has_many :location_services
   has_many :services, through: :location_services
+  has_many :addresses
 end
