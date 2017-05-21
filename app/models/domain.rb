@@ -13,6 +13,7 @@ class Domain < ApplicationRecord
 
   def perform_processor
     processor.perform(id)
+    touch :searched_at
   end
 
   private
