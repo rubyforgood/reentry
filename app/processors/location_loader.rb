@@ -11,7 +11,7 @@ class LocationLoader
             name:             record[:name],
             address:          record[:address],
             website:          record[:website],
-            services:         record[:services],
+            #services:         record[:services],
             type_of_services: record[:type],
             latitude:         record[:latitude],
             longitude:        record[:longitude],

@@ -26,8 +26,8 @@ ActiveRecord::Schema.define(version: 20170521140726) do
   end
 
   create_table "domain_services", force: :cascade do |t|
-    t.string "domain_id"
-    t.string "service_id"
+    t.bigint "domain_id"
+    t.bigint "service_id"
     t.boolean "active", default: true, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -54,8 +54,8 @@ ActiveRecord::Schema.define(version: 20170521140726) do
   end
 
   create_table "location_services", force: :cascade do |t|
-    t.string "location_id"
-    t.string "service_id"
+    t.integer "location_id"
+    t.integer "service_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "status", default: "active", null: false
@@ -89,10 +89,11 @@ ActiveRecord::Schema.define(version: 20170521140726) do
   create_table "services", force: :cascade do |t|
     t.string "name"
     t.string "taxonomy_id"
-    t.string "parent_id"
+    t.bigint "parent_id"
     t.string "parent_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "description"
   end
 
   add_foreign_key "locations", "domains"

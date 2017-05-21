@@ -5,4 +5,7 @@ Rails.application.routes.draw do
 
   resources :domains
   resources :locations
+  resources :location_services, only: [:index]
+
+  resources :downloads
 end
