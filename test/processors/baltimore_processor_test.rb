@@ -28,4 +28,17 @@ class BaltimoreProcessorTest < ActiveSupport::TestCase
     assert test_location.latitude, "-76.644556"
     assert test_location.longitude, "39.301778"
   end
+
+  it 'associates created locations with services' do
+    VCR.use_cassette('baltimore_json_fetcher') do
+      domain.perform_processor
+    end
+
+    location = Location.find_by(domain: domain,
+                                service_description: 'Emergency Shelter')
+
+    assert location, 'Location missing'
+    refute_empty location.services
+    assert_equal 'Emergency Shelter', location.services.first.name
+  end
 end

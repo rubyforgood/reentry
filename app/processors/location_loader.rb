@@ -11,12 +11,19 @@ class LocationLoader
             name:             record[:name],
             address:          record[:address],
             website:          record[:website],
-            services:         record[:services],
-            type_of_services: record[:type],
+            service_description: record[:service_description],
+            type_of_services: record[:type_of_services],
             latitude:         record[:latitude],
             longitude:        record[:longitude],
             **kwargs
           )
+
+          record.fetch(:services, []).each do |name|
+            service = Service.find_by(name: name)
+            next unless service
+            next if location.services.include?(service)
+            location.services << service
+          end
 
           record[:phone].each_with_index do |phone_number, index|
             PhoneNumber.find_or_create_by!(

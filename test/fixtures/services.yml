@@ -5,3 +5,9 @@ one:
 
 two:
   name: MyString
+
+'Emergency Shelter':
+  name: 'Emergency Shelter'
+
+'Food':
+  name: 'Food'
