@@ -32,6 +32,14 @@ class LocationLoader
               location_id: location.id
             )
           end
+          # unless record[:address].nil?
+          #   formatted_address = AddressNormalizer.normalize(address_string: record[:address])
+          #   Address.find_or_create_by!(
+          #     location_id: location.id,
+          #     address_1: formatted_address[:address_1],
+          #     address_2: formatted_address[:address_2]
+          #   )
+          # end
         end
       end
     rescue ActiveRecord::RecordInvalid
