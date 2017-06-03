@@ -1,4 +1,5 @@
 class DomainsController < ApplicationController
+  before_action :authenticate_user!
 
   def index
     @domains = Domain.all
