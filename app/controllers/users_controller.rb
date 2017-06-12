@@ -8,10 +8,10 @@ class UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
   if @user.update_attributes(user_params)
-    redirect_to user_path
+    redirect_to users_path
     flash[:success] = "User updated"
   else
-    redirect_to edit_user_path
+    redirect_to users_path
     flash[:danger] = "Unable to update user"
   end
 
