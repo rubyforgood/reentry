@@ -1,0 +1,19 @@
+<div class="col-md-6">
+  <h3>Edit User</h3>
+
+  <%= form_for(@user) do |f| %>
+  <div class="form-group">
+    <% if @user.name %>
+    <%= f.label :name %>
+    <%= @user.name %><br />
+    <% end %>
+    <%= f.label :email %>
+    <%= @user.email %><br />
+    <%= f.label :admin %>
+    <%= f.check_box :admin %>
+  </div>
+  <div class="form-group">
+    <%= f.submit "Save changes", class: 'btn btn-primary' %>
+  </div>
+  <% end %>
+</div>

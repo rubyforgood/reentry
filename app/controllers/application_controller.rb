@@ -8,4 +8,13 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.permit(:sign_up, keys: [:name])
   end
 
+  private
+
+  def ensure_admin!
+    unless current_user.admin?
+      redirect_to root_path
+      return false
+    end
+  end
+
 end

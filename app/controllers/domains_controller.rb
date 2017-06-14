@@ -1,5 +1,6 @@
 class DomainsController < ApplicationController
   before_action :authenticate_user!
+  before_action :ensure_admin!, except: [:new, :create]
 
   def index
     @domains = Domain.all

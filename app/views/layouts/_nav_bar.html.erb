@@ -8,10 +8,18 @@
         </li>
         <% if user_signed_in? %>
           <li>
+            <%= link_to "Add Domain", new_domain_path %>
+          </li>
+        <% end %>
+        <% if current_user.try(:admin?) %>
+          <li>
             <%= link_to "Domains", domains_path %>
           </li>
           <li>
             <%= link_to "Locations", locations_path %>
+          </li>
+          <li>
+            <%= link_to "Manage Users", users_path %>
           </li>
         <% end %>
         <% if user_signed_in? %>
