@@ -10,6 +10,10 @@ class ActiveSupport::TestCase
   # Add more helper methods to be used by all tests here...
 end
 
+class ActionDispatch::IntegrationTest
+  include Devise::Test::IntegrationHelpers
+end
+
 VCR.configure do |config|
   config.default_cassette_options = { record: :new_episodes }
   config.cassette_library_dir = "test/vcr_cassettes"
