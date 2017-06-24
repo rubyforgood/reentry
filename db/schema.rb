@@ -75,8 +75,10 @@ ActiveRecord::Schema.define(version: 20170614023312) do
     t.string "type_of_services"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "domain_id"
     t.string "latitude"
     t.string "longitude"
+    t.index ["domain_id"], name: "index_locations_on_domain_id"
   end
 
   create_table "phone_numbers", force: :cascade do |t|
@@ -129,4 +131,5 @@ ActiveRecord::Schema.define(version: 20170614023312) do
   add_foreign_key "domain_services", "services"
   add_foreign_key "location_services", "locations"
   add_foreign_key "location_services", "services"
+  add_foreign_key "locations", "domains"
 end
