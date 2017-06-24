@@ -77,6 +77,7 @@ class DomainsControllerTest < ActionDispatch::IntegrationTest
     end
 
     it 'should get perform_processor' do
+      sign_in users(:admin)
       domain = Domain.create(
         kind: "BaltimoreProcessor",
         url: 'https://data.baltimorecity.gov/resource/4adc-a5y9.json'
