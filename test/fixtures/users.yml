@@ -11,13 +11,13 @@ user:
   confirmed_at: '2016-01-02 08:31:23'
 
 user_two:
-  name: 'Timoth McGee'
+  name: 'Timothy McGee'
   email: 'tmcgee@test.com'
   admin: false
   confirmed_at: '2016-01-02 08:31:23'
 
 user_three:
-  name: 'Kaitlin Tood'
+  name: 'Kaitlin Todd'
   email: 'ktodd@test.com'
   admin: false
   confirmed_at: '2016-01-02 08:31:23'

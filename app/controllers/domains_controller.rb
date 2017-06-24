@@ -62,7 +62,7 @@ class DomainsController < ApplicationController
   private
 
   def domain_params
-    params.require(:domain).permit(:name, :kind, :url, :description, :search_depth, :status, :status_date, :searched_at)
+    params.require(:domain).permit(:name, :kind, :url, :description)
   end
 
 end

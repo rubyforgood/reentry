@@ -7,48 +7,48 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
   end
 
   describe UsersController do
-    it "should allow admins to view users index" do
+    it "should get index if user is admin" do
       sign_in users(:admin)
-      get users_path
+      get users_url
       assert_response :success
     end
 
-    it "should not allow users to view users index" do
+    it "should not not get index if user is a non-admin" do
       sign_in users(:user)
-      get users_path
-      assert_redirected_to root_path
+      get users_url
+      assert_redirected_to root_url
     end
 
-    it "should allow admins to update users" do
+    it "should update users if admin" do
       sign_in users(:admin)
       patch user_url(@user), params: { user: { admin: @user.admin } }
       assert_redirected_to users_url
       assert @user.admin = true
     end
 
-    it "should not allow regular users to update users" do
+    it "should not update users if non-admin user" do
       sign_in users(:user)
       patch user_url(@user), params: { user: { admin: @user.admin } }
-      assert_redirected_to root_path
+      assert_redirected_to root_url
       assert_not @user.admin
     end
 
-    it "shoud allow admins to delete users" do
+    it "should destroy users if admin" do
       sign_in users(:admin)
       @user2 = users(:user_three)
       assert_difference('User.count', -1) do
-        delete user_path(@user2)
+        delete user_url(@user2)
       end
       assert_redirected_to users_url
     end
 
-    it "should not allow regular users to delete users" do
+    it "should not destroy users if non-admin user" do
       sign_in users(:user)
       @user2 = users(:user_three)
       assert_no_difference('User.count') do
-        delete user_path(@user2)
+        delete user_url(@user2)
       end
-      assert_redirected_to root_path
+      assert_redirected_to root_url
     end
   end
 end
