@@ -1,0 +1,32 @@
+<div class="col-md-10">
+  <h3>Users</h3>
+  <table class='table table-striped'>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Last Signed In</th>
+        <th>Admin?</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @users.each do |user| %>
+        <tr>
+          <td><%= user.name %></td>
+          <td><%= user.email %></td>
+          <td><%= user.last_sign_in_at %></td>
+          <td><%= user.admin %></td>
+          <td>
+            <%= link_to 'Edit', edit_user_path(user), class: 'btn btn-warning btn-xs' %>
+
+            <%= link_to 'Delete',
+                        user,
+                        method: :delete,
+                        data: { confirm: "Are you sure you want to delete? "},
+                        class: 'btn btn-danger btn-xs' %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
