@@ -30,6 +30,9 @@ class SigninTest < ActionDispatch::IntegrationTest
       assert_redirected_to root_url
       follow_redirect!
       assert_select "a[href=?]", new_domain_path
+      assert_select "a[href=?]", domains_path, count: 0
+      assert_select "a[href=?]", locations_path, count: 0
+      assert_select "a[href=?]", users_path, count: 0
       assert_select "a[href=?]", destroy_user_session_path
     end
 

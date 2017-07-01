@@ -23,6 +23,7 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
       sign_in users(:admin)
       patch user_url(@user), params: { user: { admin: @user.admin } }
       assert_redirected_to users_url
+      assert_equal 'User updated', flash[:success]
       assert @user.admin = true
     end
 
@@ -40,6 +41,7 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
         delete user_url(@user2)
       end
       assert_redirected_to users_url
+      assert_equal 'User removed', flash[:success]
     end
 
     it "should not destroy users if non-admin user" do
