@@ -12,7 +12,7 @@ class DomainsControllerTest < ActionDispatch::IntegrationTest
 
     it "should not get index for a non-admin user" do
       sign_in users(:user)
-      get users_url
+      get domains_url
       assert_redirected_to root_path
     end
 
@@ -34,6 +34,7 @@ class DomainsControllerTest < ActionDispatch::IntegrationTest
         post domains_url, params: { domain: { name: "Test domain", kind: "Test Processor", url: "https://testdomain.com", description: "Test" } }
       end
       assert_redirected_to domains_url
+      assert_equal 'Domain saved', flash[:success]
     end
 
     it "should create new domain for admin" do
@@ -42,6 +43,7 @@ class DomainsControllerTest < ActionDispatch::IntegrationTest
         post domains_url, params: { domain: { name: "Test domain", kind: "Test Processor", url: "https://testdomain.com", description: "Test" } }
       end
       assert_redirected_to domains_url
+      assert_equal 'Domain saved', flash[:success]
     end
 
     it "should update domain if admin" do
@@ -49,6 +51,7 @@ class DomainsControllerTest < ActionDispatch::IntegrationTest
       domain = domains(:one)
       patch domain_url(domain), params: { domain: { description: "Another Test", status: "active" } }
       assert_redirected_to domain_url
+      assert_equal 'Domain updated', flash[:success]
     end
 
     it "should not update domain if non-admin" do
@@ -56,6 +59,7 @@ class DomainsControllerTest < ActionDispatch::IntegrationTest
       domain = domains(:one)
       patch domain_url(domain), params: { domain: { description: "Another Test", status: "active" } }
       assert_redirected_to root_url
+
     end
 
     it "should destroy domain if admin" do
@@ -65,6 +69,7 @@ class DomainsControllerTest < ActionDispatch::IntegrationTest
         delete domain_url(domain)
       end
       assert_redirected_to domains_url
+      assert_equal "Domain destroyed", flash[:success]
     end
 
     it "should not destroy domain if non-admin" do
