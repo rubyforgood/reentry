@@ -20,13 +20,14 @@ require 'csv'
 service_text = File.read(Rails.root.join('lib', 'seeds', 'taxonomy.csv'))
 csv = CSV.parse(service_text, :headers => true)
 csv.each do |row|
-  t = Service.new
-  t.taxonomy_id = row['taxonomy_id']
-  t.name = row['name']
-  t.parent_id = row['parent_id']
-  t.parent_name = row['parent_name']
-  t.save
-  puts "#{t.taxonomy_id} #{t.name} saved"
+  service = Service.new.tap do |s|
+    s.taxonomy_id = row['taxonomy_id']
+    s.name = row['name']
+    s.parent_id = row['parent_id']
+    s.parent_name = row['parent_name']
+    s.save
+  end
+  puts "#{service.taxonomy_id} #{service.name} saved"
 end
 puts "There are now #{Service.count} rows in the taxonomies table"
 
