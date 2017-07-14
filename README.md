@@ -10,7 +10,7 @@ This project aims to create a more maintainable data aggregation and distributio
 ### About Here For Reentry
 Here For Reentry is a community-based organization focused on creating a toolset to help returning citizens successfully reintegrate into society. Here For Reentry uses online tools to help these citizens interact socially with one another, learn about important social services available to them and organize politically to advocate for issues relevant to their lives and their communities. These are our neighbors, our friends and our family.
 
-Here For Reentry's mission is to provide returning citizens everywhere with an all-in-one resource portal and to support an ecosystem of information sharing and connection to care. Learn more about Here For Reentry and view other tools on their website,[https://here4reentry.com].
+Here For Reentry's mission is to provide returning citizens everywhere with an all-in-one resource portal and to support an ecosystem of information sharing and connection to care. Learn more about Here For Reentry and view other tools on their website, [https://here4reentry.com](https://here4reentry.com).
 
 
 ## Development
@@ -39,4 +39,4 @@ To run tests:
 ## Contributing
 We ♥ contributors! If you are interested in contributing, please checkout out our [guidelines for contributing](CONTRIBUTING.md) before submitting a pull request
 
-Most of our development discussion happens in the [#reentry](https://rubyforgood.slack.com/messages/habitat_humanity) channel on the Ruby for Good Slack. [Get an invite](https://rubyforgood.herokuapp.com/).
+Most of our development discussion happens in the [#reentry](https://rubyforgood.slack.com/messages/reentry) channel on the Ruby for Good Slack. [Get an invite](https://rubyforgood.herokuapp.com/).
