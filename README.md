@@ -16,7 +16,7 @@ Here For Reentry's mission is to provide returning citizens everywhere with an a
 ## Development
 This section will help you get setup to develop and run the project locally.  For information about contributing, please check out the [Contributing](#contributing) section.
 
-You will need Git, Ruby 2.4.1 and PostgreSQL. The current Rails version is 5.1.1. This project also uses [Tabula](https://github.com/tabulapdf/tabula) to assist with parsing PDF files and is required by some of the tests. These tests are skipped if `ENV['TEST_FASTER']`.
+You will need Git, Ruby 2.4.4 and PostgreSQL. The current Rails version is 5.1.7. This project also uses [Tabula](https://github.com/tabulapdf/tabula) to assist with parsing PDF files and is required by some of the tests. These tests are skipped if `ENV['TEST_FASTER']`.
 
 If you are starting with a virgin machine, these guides will help you with the initial setup of your development environment.
 
