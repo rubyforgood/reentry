@@ -5,7 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-gem 'rails', '~> 5.1.1'
+gem 'rails', '~> 5.1.7'
 gem 'pg'
 gem 'puma', '~> 3.7'
 gem 'sass-rails', '~> 5.0'
@@ -16,8 +16,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'immutable-struct'
 gem 'nokogiri'
 gem 'geocoder'
-gem 'bootstrap-sass', '3.3.7'
-gem 'devise', '~> 4.3.0'
+gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
+gem 'devise', '~> 4.6', '>= 4.6.2'
 
 group :development, :test do
   gem 'pry'
